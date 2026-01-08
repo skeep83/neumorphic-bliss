@@ -223,6 +223,87 @@ card_mod:
 
 ---
 
+## ✨ Анимации (Card-Mod Animations)
+
+Готовые анимационные snippets находятся в `snippets/card-mod-animations.yaml`.
+
+### Быстрая установка
+
+#### 1. Установи card-mod
+
+HACS → Frontend → Поиск "card-mod" → Скачать → Перезагрузить HA
+
+#### 2. Добавь в `configuration.yaml`
+
+```yaml
+frontend:
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
+```
+
+#### 3. Применение к карточке
+
+Открой карточку в режиме YAML и добавь блок `card_mod`:
+
+```yaml
+type: custom:mushroom-light-card
+entity: light.living_room
+card_mod:
+  style: |
+    ha-card {
+      background: linear-gradient(180deg, 
+        rgba(135, 206, 235, 0.15) 0%, 
+        transparent 20%),
+        var(--ha-card-background);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    ha-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 6px 6px 12px var(--shadow-dark),
+                  -6px -6px 12px var(--shadow-light);
+    }
+```
+
+### Доступные анимации
+
+| Snippet | Описание |
+|---------|----------|
+| `sky_gradient_shimmer` | Голубой градиент сверху + мерцание |
+| `pulse_shadow` | Пульсирующая тень |
+| `hover_lift` | Подъём карточки при наведении |
+| `glow_on_active` | Свечение когда устройство включено |
+| `gradient_wave` | Движущийся градиент |
+| `soft_press` | Эффект нажатия |
+| `full_interactive` | Все эффекты вместе |
+
+### Пример: Полный интерактивный эффект
+
+```yaml
+type: custom:mushroom-climate-card
+entity: climate.bedroom
+card_mod:
+  style: |
+    ha-card {
+      background: linear-gradient(180deg, 
+        rgba(135, 206, 235, 0.12) 0%, 
+        transparent 20%),
+        var(--ha-card-background);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    ha-card:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 8px 8px 16px var(--shadow-dark),
+                  -8px -8px 16px var(--shadow-light);
+    }
+    ha-card:active {
+      transform: scale(0.98);
+      box-shadow: inset 3px 3px 6px var(--shadow-dark),
+                  inset -3px -3px 6px var(--shadow-light);
+    }
+```
+
+---
+
 ## 🍄 Recommended Cards
 
 For the best visual experience, we recommend these cards:
