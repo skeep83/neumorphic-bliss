@@ -7,6 +7,18 @@
 
 > 🎨 **Theme** + 🎴 **Custom Cards** — Complete neumorphic UI kit for Home Assistant
 
+<p align="center">
+  <a href="https://b317b869-7743-413b-bf8d-bc2eda607be4.lovableproject.com" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Live_Demo-Try_It_Now-blue?style=for-the-badge" alt="Live Demo">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://b317b869-7743-413b-bf8d-bc2eda607be4.lovableproject.com" target="_blank">
+    <strong>👉 Interactive Preview & Theme Builder 👈</strong>
+  </a>
+</p>
+
 **Open Source Project** — Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
