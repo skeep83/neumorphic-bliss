@@ -19,6 +19,12 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://b317b869-7743-413b-bf8d-bc2eda607be4.lovableproject.com" target="_blank">
+    <img src="docs/screenshots/hero-preview.png" alt="Full Neumorphic Theme Preview" width="100%">
+  </a>
+</p>
+
 **Open Source Project** — Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
