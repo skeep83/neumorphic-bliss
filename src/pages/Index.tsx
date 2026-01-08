@@ -4,20 +4,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Lightbulb, 
-  Thermometer, 
-  Home, 
-  Sun, 
-  Moon, 
-  Power, 
+import CardModAnimationPreview from "@/components/CardModAnimationPreview";
+import {
+  Lightbulb,
+  Thermometer,
+  Home,
+  Sun,
+  Moon,
+  Power,
   Droplets,
   Wind,
   Zap,
   Download,
   Github,
   Copy,
-  Check
+  Check,
 } from "lucide-react";
 
 const Index = () => {
@@ -186,6 +187,8 @@ const Index = () => {
             </Card>
           </div>
         </section>
+
+        <CardModAnimationPreview />
 
         {/* Quick Actions */}
         <section className="mb-12">
