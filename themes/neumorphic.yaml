@@ -1,0 +1,291 @@
+# ==============================================================================
+# Neumorphic Card-Mod Theme for Home Assistant
+# A premium soft-UI theme with realistic neumorphic shadows
+# https://github.com/ha-community/ha-neumorphic-cardmod-theme
+# ==============================================================================
+
+Neumorphic:
+  # ==========================================================================
+  # LIGHT MODE
+  # ==========================================================================
+  modes:
+    light:
+      # ------------------------------------------------------------------------
+      # Base Colors
+      # ------------------------------------------------------------------------
+      primary-color: "#4A6FA5"
+      accent-color: "#4A6FA5"
+      
+      # ------------------------------------------------------------------------
+      # Text Colors
+      # ------------------------------------------------------------------------
+      primary-text-color: "#2D3142"
+      secondary-text-color: "#5C5F6E"
+      text-primary-color: "#FFFFFF"
+      disabled-text-color: "#9A9DAA"
+      
+      # ------------------------------------------------------------------------
+      # Background Colors
+      # ------------------------------------------------------------------------
+      primary-background-color: "#E4E4E0"
+      secondary-background-color: "#DEDEDA"
+      card-background-color: "#E4E4E0"
+      
+      # ------------------------------------------------------------------------
+      # Divider & Border
+      # ------------------------------------------------------------------------
+      divider-color: "rgba(45, 49, 66, 0.12)"
+      
+      # ------------------------------------------------------------------------
+      # Header
+      # ------------------------------------------------------------------------
+      app-header-background-color: "#E4E4E0"
+      app-header-text-color: "#2D3142"
+      
+      # ------------------------------------------------------------------------
+      # Sidebar
+      # ------------------------------------------------------------------------
+      sidebar-background-color: "#E4E4E0"
+      sidebar-text-color: "#2D3142"
+      sidebar-icon-color: "#5C5F6E"
+      sidebar-selected-background-color: "rgba(74, 111, 165, 0.15)"
+      sidebar-selected-icon-color: "#4A6FA5"
+      sidebar-selected-text-color: "#4A6FA5"
+      
+      # ------------------------------------------------------------------------
+      # Cards
+      # ------------------------------------------------------------------------
+      ha-card-border-radius: "16px"
+      ha-card-border-width: "0"
+      ha-card-border-color: "transparent"
+      ha-card-background: "#E4E4E0"
+      ha-card-box-shadow: "6px 6px 12px #c8c8c4, -6px -6px 12px #ffffff"
+      
+      # ------------------------------------------------------------------------
+      # States
+      # ------------------------------------------------------------------------
+      state-icon-color: "#5C5F6E"
+      state-icon-active-color: "#4A6FA5"
+      state-on-color: "#4A9F6E"
+      state-off-color: "#9A9DAA"
+      
+      # ------------------------------------------------------------------------
+      # Switches & Toggles
+      # ------------------------------------------------------------------------
+      switch-checked-button-color: "#4A6FA5"
+      switch-checked-track-color: "rgba(74, 111, 165, 0.4)"
+      switch-unchecked-button-color: "#CDCDC9"
+      switch-unchecked-track-color: "rgba(92, 95, 110, 0.2)"
+      
+      # ------------------------------------------------------------------------
+      # Sliders
+      # ------------------------------------------------------------------------
+      paper-slider-knob-color: "#4A6FA5"
+      paper-slider-active-color: "#4A6FA5"
+      paper-slider-container-color: "rgba(92, 95, 110, 0.2)"
+      
+      # ------------------------------------------------------------------------
+      # Inputs
+      # ------------------------------------------------------------------------
+      input-fill-color: "#DEDEDA"
+      input-ink-color: "#2D3142"
+      input-label-ink-color: "#5C5F6E"
+      input-disabled-fill-color: "#D4D4D0"
+      input-disabled-ink-color: "#9A9DAA"
+      
+      # ------------------------------------------------------------------------
+      # Labels & Badges
+      # ------------------------------------------------------------------------
+      label-badge-background-color: "#E4E4E0"
+      label-badge-text-color: "#2D3142"
+      
+      # ------------------------------------------------------------------------
+      # Alerts
+      # ------------------------------------------------------------------------
+      success-color: "#4A9F6E"
+      warning-color: "#D4A574"
+      error-color: "#C75B5B"
+      info-color: "#4A6FA5"
+      
+      # ------------------------------------------------------------------------
+      # Code Editor
+      # ------------------------------------------------------------------------
+      code-editor-background-color: "#DEDEDA"
+      codemirror-keyword: "#C75B5B"
+      codemirror-operator: "#2D3142"
+      codemirror-variable: "#4A6FA5"
+      codemirror-variable-2: "#4A9F6E"
+      codemirror-string: "#D4A574"
+      codemirror-comment: "#9A9DAA"
+      codemirror-number: "#C75B5B"
+      codemirror-atom: "#4A6FA5"
+      
+      # ------------------------------------------------------------------------
+      # Neumorphic Custom Variables (for card-mod)
+      # ------------------------------------------------------------------------
+      # Base shadow colors
+      neumorphic-shadow-dark: "#c8c8c4"
+      neumorphic-shadow-light: "#ffffff"
+      
+      # Concave (pressed/inset) shadows
+      neumorphic-concave-shadow-sm: "inset 2px 2px 4px #c8c8c4, inset -2px -2px 4px #ffffff"
+      neumorphic-concave-shadow-md: "inset 4px 4px 8px #c8c8c4, inset -4px -4px 8px #ffffff"
+      neumorphic-concave-shadow-lg: "inset 6px 6px 12px #c8c8c4, inset -6px -6px 12px #ffffff"
+      
+      # Convex (raised) shadows
+      neumorphic-convex-shadow-sm: "2px 2px 4px #c8c8c4, -2px -2px 4px #ffffff"
+      neumorphic-convex-shadow-md: "4px 4px 8px #c8c8c4, -4px -4px 8px #ffffff"
+      neumorphic-convex-shadow-lg: "6px 6px 12px #c8c8c4, -6px -6px 12px #ffffff"
+      
+      # Flat (subtle) shadow
+      neumorphic-flat-shadow: "3px 3px 6px #c8c8c4, -3px -3px 6px #ffffff"
+      
+      # Interactive states
+      neumorphic-hover-shadow: "8px 8px 16px #c8c8c4, -8px -8px 16px #ffffff"
+      neumorphic-active-shadow: "inset 3px 3px 6px #c8c8c4, inset -3px -3px 6px #ffffff"
+      
+      # Base surface color (for card-mod backgrounds)
+      neumorphic-surface: "#E4E4E0"
+      neumorphic-surface-alt: "#DEDEDA"
+      
+    # ==========================================================================
+    # DARK MODE
+    # ==========================================================================
+    dark:
+      # ------------------------------------------------------------------------
+      # Base Colors
+      # ------------------------------------------------------------------------
+      primary-color: "#6B9BD2"
+      accent-color: "#6B9BD2"
+      
+      # ------------------------------------------------------------------------
+      # Text Colors
+      # ------------------------------------------------------------------------
+      primary-text-color: "#E8E4DF"
+      secondary-text-color: "#A8A5A0"
+      text-primary-color: "#FFFFFF"
+      disabled-text-color: "#6B6B6F"
+      
+      # ------------------------------------------------------------------------
+      # Background Colors
+      # ------------------------------------------------------------------------
+      primary-background-color: "#2A2A2E"
+      secondary-background-color: "#232327"
+      card-background-color: "#2A2A2E"
+      
+      # ------------------------------------------------------------------------
+      # Divider & Border
+      # ------------------------------------------------------------------------
+      divider-color: "rgba(232, 228, 223, 0.12)"
+      
+      # ------------------------------------------------------------------------
+      # Header
+      # ------------------------------------------------------------------------
+      app-header-background-color: "#2A2A2E"
+      app-header-text-color: "#E8E4DF"
+      
+      # ------------------------------------------------------------------------
+      # Sidebar
+      # ------------------------------------------------------------------------
+      sidebar-background-color: "#232327"
+      sidebar-text-color: "#E8E4DF"
+      sidebar-icon-color: "#A8A5A0"
+      sidebar-selected-background-color: "rgba(107, 155, 210, 0.2)"
+      sidebar-selected-icon-color: "#6B9BD2"
+      sidebar-selected-text-color: "#6B9BD2"
+      
+      # ------------------------------------------------------------------------
+      # Cards
+      # ------------------------------------------------------------------------
+      ha-card-border-radius: "16px"
+      ha-card-border-width: "0"
+      ha-card-border-color: "transparent"
+      ha-card-background: "#2A2A2E"
+      ha-card-box-shadow: "6px 6px 12px #1e1e21, -6px -6px 12px #36363b"
+      
+      # ------------------------------------------------------------------------
+      # States
+      # ------------------------------------------------------------------------
+      state-icon-color: "#A8A5A0"
+      state-icon-active-color: "#6B9BD2"
+      state-on-color: "#6BC78E"
+      state-off-color: "#6B6B6F"
+      
+      # ------------------------------------------------------------------------
+      # Switches & Toggles
+      # ------------------------------------------------------------------------
+      switch-checked-button-color: "#6B9BD2"
+      switch-checked-track-color: "rgba(107, 155, 210, 0.4)"
+      switch-unchecked-button-color: "#4A4A4E"
+      switch-unchecked-track-color: "rgba(168, 165, 160, 0.2)"
+      
+      # ------------------------------------------------------------------------
+      # Sliders
+      # ------------------------------------------------------------------------
+      paper-slider-knob-color: "#6B9BD2"
+      paper-slider-active-color: "#6B9BD2"
+      paper-slider-container-color: "rgba(168, 165, 160, 0.2)"
+      
+      # ------------------------------------------------------------------------
+      # Inputs
+      # ------------------------------------------------------------------------
+      input-fill-color: "#232327"
+      input-ink-color: "#E8E4DF"
+      input-label-ink-color: "#A8A5A0"
+      input-disabled-fill-color: "#1e1e21"
+      input-disabled-ink-color: "#6B6B6F"
+      
+      # ------------------------------------------------------------------------
+      # Labels & Badges
+      # ------------------------------------------------------------------------
+      label-badge-background-color: "#2A2A2E"
+      label-badge-text-color: "#E8E4DF"
+      
+      # ------------------------------------------------------------------------
+      # Alerts
+      # ------------------------------------------------------------------------
+      success-color: "#6BC78E"
+      warning-color: "#E8B896"
+      error-color: "#E87B7B"
+      info-color: "#6B9BD2"
+      
+      # ------------------------------------------------------------------------
+      # Code Editor
+      # ------------------------------------------------------------------------
+      code-editor-background-color: "#232327"
+      codemirror-keyword: "#E87B7B"
+      codemirror-operator: "#E8E4DF"
+      codemirror-variable: "#6B9BD2"
+      codemirror-variable-2: "#6BC78E"
+      codemirror-string: "#E8B896"
+      codemirror-comment: "#6B6B6F"
+      codemirror-number: "#E87B7B"
+      codemirror-atom: "#6B9BD2"
+      
+      # ------------------------------------------------------------------------
+      # Neumorphic Custom Variables (for card-mod)
+      # ------------------------------------------------------------------------
+      # Base shadow colors
+      neumorphic-shadow-dark: "#1e1e21"
+      neumorphic-shadow-light: "#36363b"
+      
+      # Concave (pressed/inset) shadows
+      neumorphic-concave-shadow-sm: "inset 2px 2px 4px #1e1e21, inset -2px -2px 4px #36363b"
+      neumorphic-concave-shadow-md: "inset 4px 4px 8px #1e1e21, inset -4px -4px 8px #36363b"
+      neumorphic-concave-shadow-lg: "inset 6px 6px 12px #1e1e21, inset -6px -6px 12px #36363b"
+      
+      # Convex (raised) shadows
+      neumorphic-convex-shadow-sm: "2px 2px 4px #1e1e21, -2px -2px 4px #36363b"
+      neumorphic-convex-shadow-md: "4px 4px 8px #1e1e21, -4px -4px 8px #36363b"
+      neumorphic-convex-shadow-lg: "6px 6px 12px #1e1e21, -6px -6px 12px #36363b"
+      
+      # Flat (subtle) shadow
+      neumorphic-flat-shadow: "3px 3px 6px #1e1e21, -3px -3px 6px #36363b"
+      
+      # Interactive states
+      neumorphic-hover-shadow: "8px 8px 16px #1e1e21, -8px -8px 16px #36363b"
+      neumorphic-active-shadow: "inset 3px 3px 6px #1e1e21, inset -3px -3px 6px #36363b"
+      
+      # Base surface color (for card-mod backgrounds)
+      neumorphic-surface: "#2A2A2E"
+      neumorphic-surface-alt: "#232327"
