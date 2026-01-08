@@ -32,7 +32,7 @@ const Index = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("https://github.com/YOUR_USERNAME/ha-full-neumorphic-theme");
+    navigator.clipboard.writeText("https://github.com/lovable-community/ha-full-neumorphic-theme");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -254,7 +254,7 @@ const Index = () => {
               <div className="code-block">
                 <code className="text-sm">
                   1. Open HACS → Frontend → Custom repositories<br />
-                  2. Add: https://github.com/YOUR_USERNAME/ha-full-neumorphic-theme<br />
+                  2. Add: https://github.com/lovable-community/ha-full-neumorphic-theme<br />
                   3. Select "Theme" → Download<br />
                   4. Restart Home Assistant<br />
                   5. Select "Full Neumorphic" in your profile
