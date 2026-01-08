@@ -1,6 +1,15 @@
 # Full Neumorphic Theme & Cards for Home Assistant
 
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2023.1+-blue?style=flat-square&logo=home-assistant)](https://www.home-assistant.io/)
+[![HACS](https://img.shields.io/badge/HACS-Custom-orange?style=flat-square)](https://hacs.xyz/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Community](https://img.shields.io/badge/Community-Open%20Source-purple?style=flat-square)](CONTRIBUTING.md)
+
 > 🎨 **Theme** + 🎴 **Custom Cards** — Complete neumorphic UI kit for Home Assistant
+
+**Open Source Project** — Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
 
 ## 📦 Two Packages
 
@@ -51,3 +60,29 @@ See `docs/CARDS.md` for full documentation.
 ## 🎨 Theme Installation
 
 See `docs/README.md` for theme installation via HACS.
+
+---
+
+## 🤝 Contributing
+
+This is an **open-source community project**! We welcome:
+
+- 🐛 Bug reports and fixes
+- ✨ New features and cards
+- 📝 Documentation improvements
+- 🎨 Design enhancements
+- 🌍 Translations
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## 📄 License
+
+MIT License — Free to use, modify, and share.
+
+---
+
+<p align="center">
+  Made with ❤️ for the Home Assistant Community
+</p>
