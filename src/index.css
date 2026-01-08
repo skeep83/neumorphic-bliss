@@ -238,6 +238,108 @@
     z-index: 1;
   }
 
+  .card-neumorphic > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  @keyframes ha-shimmer {
+    0% {
+      background-position: 0% 0%;
+      opacity: 0.55;
+    }
+    50% {
+      opacity: 0.85;
+    }
+    100% {
+      background-position: 140% 0%;
+      opacity: 0.55;
+    }
+  }
+
+  @keyframes ha-wave {
+    0% {
+      transform: translateX(-60%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 0.35;
+    }
+    100% {
+      transform: translateX(160%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes ha-breathe {
+    0%,
+    100% {
+      transform: translateY(0);
+      filter: brightness(1);
+    }
+    50% {
+      transform: translateY(-2px);
+      filter: brightness(1.03);
+    }
+  }
+
+  .card-anim-shimmer::before {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--accent-primary) / 0.04) 0%,
+      hsl(200 80% 75% / 0.35) 25%,
+      hsl(var(--accent-primary-light) / 0.10) 50%,
+      hsl(200 80% 75% / 0.25) 75%,
+      hsl(var(--accent-primary) / 0.04) 100%
+    );
+    background-size: 220% 100%;
+    animation: ha-shimmer 3.8s ease-in-out infinite;
+  }
+
+  .card-anim-wave::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--accent-primary) / 0.12),
+      transparent
+    );
+    filter: blur(2px);
+    animation: ha-wave 2.8s ease-in-out infinite;
+  }
+
+  .card-anim-pulse {
+    animation: ha-breathe 4.2s ease-in-out infinite;
+  }
+
+  .card-anim-hover-lift:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+
+  .card-anim-hover-lift:active {
+    transform: scale(0.985);
+    box-shadow: var(--shadow-concave) !important;
+  }
+
+  .card-anim-soft-press:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-concave) !important;
+  }
+
+  .card-anim-glow.is-active {
+    filter: drop-shadow(0 0 14px hsl(var(--accent-primary) / 0.25));
+  }
+
   .card-neumorphic:hover {
     box-shadow: var(--shadow-convex-lg) !important;
     transform: translateY(-2px);
