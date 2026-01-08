@@ -1,75 +1,67 @@
 # Changelog
 
-All notable changes to the Full Neumorphic Theme will be documented in this file.
+All notable changes to the Neumorphic Card-Mod Theme will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2026-01-08
+## [Unreleased]
+
+## [1.0.0] - 2024-01-08
 
 ### Added
-- Initial release of Full Neumorphic Theme
-- Light mode with warm off-white base (#E8E2D9)
-- Dark mode with rich charcoal base (#2A2A2E)
-- Complete neumorphic shadow system (convex, concave, flat variants)
-- Full coverage of Home Assistant theme variables:
+
+- Initial release of Neumorphic Card-Mod Theme
+- Light mode with warm off-white base (`#E4E4E0`)
+- Dark mode with rich charcoal base (`#2A2A2E`)
+- Complete Home Assistant theme variables:
+  - Primary and secondary colors
   - Text colors (primary, secondary, disabled)
   - Background colors (primary, secondary, card)
-  - State colors (success, warning, error, info)
-  - Sidebar styling (background, text, icons, selected states)
+  - Sidebar styling
   - Header styling
-  - Card styling (background, border-radius, shadows)
-  - Input field styling
-  - Toggle/switch styling
+  - Card styling with 16px border radius
+  - State colors (success, warning, error, info)
+  - Switch and toggle styling
   - Slider styling
-  - Badge/label styling
+  - Input field styling
+  - Label and badge styling
   - Code editor syntax colors
-- Card-mod snippets for deep customization:
-  - ha-card convex/concave effects
-  - Mushroom card styling
-  - Mushroom chips styling
-  - Tile card styling
-  - Button card styling
-  - Toggle/switch neumorphic styling
-  - Slider neumorphic styling
-  - Input field neumorphic styling
-- HACS compatibility
-- Comprehensive documentation with:
-  - Installation instructions (HACS and manual)
-  - Typography setup guide (3 methods)
-  - Card-mod usage examples
-  - Design system reference
-  - Customization guide
-  - FAQ section
+- Custom CSS variables for card-mod integration:
+  - `--neumorphic-convex-shadow-{sm,md,lg}` - Raised shadow variants
+  - `--neumorphic-concave-shadow-{sm,md,lg}` - Pressed/inset shadow variants
+  - `--neumorphic-flat-shadow` - Subtle flat shadow
+  - `--neumorphic-hover-shadow` - Enhanced hover state
+  - `--neumorphic-active-shadow` - Pressed state
+  - `--neumorphic-surface` - Base surface color
+  - `--neumorphic-surface-alt` - Alternate surface color
+- HACS compatibility with proper `hacs.json`
+- GitHub Actions workflow for HACS validation
+- Comprehensive documentation with card-mod examples
 
 ### Design Tokens
-- **Light Mode Colors:**
-  - Base: #E8E2D9
-  - Primary: #4A6FA5
-  - Text Primary: #2D3142
-  - Success: #4A9F6E
-  - Warning: #D4A574
-  - Error: #C75B5B
 
-- **Dark Mode Colors:**
-  - Base: #2A2A2E
-  - Primary: #6B9BD2
-  - Text Primary: #E8E4DF
-  - Success: #6BC78E
-  - Warning: #E8B896
-  - Error: #E87B7B
+#### Light Mode
 
-### Typography
-- Primary font: Inter (400-700 weights)
-- Display font: Plus Jakarta Sans (500-700 weights)
-- Monospace font: JetBrains Mono
+| Token | Value |
+|-------|-------|
+| Base Surface | `#E4E4E0` |
+| Shadow Dark | `#c8c8c4` |
+| Shadow Light | `#ffffff` |
+| Primary Color | `#4A6FA5` |
+| Primary Text | `#2D3142` |
+
+#### Dark Mode
+
+| Token | Value |
+|-------|-------|
+| Base Surface | `#2A2A2E` |
+| Shadow Dark | `#1e1e21` |
+| Shadow Light | `#36363b` |
+| Primary Color | `#6B9BD2` |
+| Primary Text | `#E8E4DF` |
 
 ---
 
-## Future Plans
-
-- [ ] Additional accent color variants (teal, rose, olive)
-- [ ] Glassmorphism variant theme
-- [ ] YAML snippets for more custom cards
-- [ ] Pre-built dashboard templates
-- [ ] Interactive theme configurator
+[Unreleased]: https://github.com/ha-community/ha-neumorphic-cardmod-theme/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/ha-community/ha-neumorphic-cardmod-theme/releases/tag/v1.0.0
