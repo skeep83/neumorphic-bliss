@@ -1,0 +1,231 @@
+# =============================================================================
+# CARD-MOD ANIMATIONS FOR HOME ASSISTANT
+# =============================================================================
+# Copy these snippets to your cards in Home Assistant
+# Requires: card-mod (install via HACS)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. SKY BLUE GRADIENT WITH SHIMMER
+# -----------------------------------------------------------------------------
+# Soft blue gradient on top 20% with subtle brightness pulse
+
+sky_gradient_shimmer:
+  card_mod:
+    style: |
+      ha-card {
+        background: 
+          linear-gradient(
+            180deg,
+            rgba(135, 180, 220, 0.5) 0%,
+            rgba(135, 180, 220, 0.2) 15%,
+            var(--ha-card-background, #E4E8EE) 20%
+          ) !important;
+        animation: shimmer 3s ease-in-out infinite;
+      }
+      @keyframes shimmer {
+        0%, 100% { 
+          filter: brightness(1);
+        }
+        50% { 
+          filter: brightness(1.03);
+        }
+      }
+
+# -----------------------------------------------------------------------------
+# 2. PULSING NEUMORPHIC SHADOW
+# -----------------------------------------------------------------------------
+# Subtle shadow pulse for "breathing" effect
+
+pulse_shadow:
+  card_mod:
+    style: |
+      ha-card {
+        animation: pulse-shadow 2.5s ease-in-out infinite;
+      }
+      @keyframes pulse-shadow {
+        0%, 100% {
+          box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), 
+                      -9px -9px 16px rgba(255, 255, 255, 0.8);
+        }
+        50% {
+          box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7), 
+                      -12px -12px 20px rgba(255, 255, 255, 0.9);
+        }
+      }
+
+# -----------------------------------------------------------------------------
+# 3. HOVER LIFT EFFECT
+# -----------------------------------------------------------------------------
+# Card lifts up on hover with enhanced shadow
+
+hover_lift:
+  card_mod:
+    style: |
+      ha-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      ha-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 12px 12px 24px rgba(163, 177, 198, 0.7), 
+                    -12px -12px 24px rgba(255, 255, 255, 0.9) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# 4. GLOW ON ACTIVE STATE
+# -----------------------------------------------------------------------------
+# Adds glow when entity is ON
+
+glow_on_active:
+  card_mod:
+    style: |
+      ha-card {
+        transition: box-shadow 0.4s ease;
+      }
+      :host([active]) ha-card,
+      ha-card.active {
+        box-shadow: 
+          9px 9px 16px rgba(163, 177, 198, 0.6), 
+          -9px -9px 16px rgba(255, 255, 255, 0.8),
+          0 0 20px rgba(74, 111, 165, 0.3) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# 5. GRADIENT WAVE ANIMATION
+# -----------------------------------------------------------------------------
+# Moving gradient effect across the card
+
+gradient_wave:
+  card_mod:
+    style: |
+      ha-card {
+        background: 
+          linear-gradient(
+            90deg,
+            var(--ha-card-background, #E4E8EE) 0%,
+            rgba(135, 180, 220, 0.3) 25%,
+            var(--ha-card-background, #E4E8EE) 50%,
+            rgba(135, 180, 220, 0.3) 75%,
+            var(--ha-card-background, #E4E8EE) 100%
+          ) !important;
+        background-size: 200% 100%;
+        animation: gradient-wave 4s ease-in-out infinite;
+      }
+      @keyframes gradient-wave {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+      }
+
+# -----------------------------------------------------------------------------
+# 6. SOFT PRESS EFFECT
+# -----------------------------------------------------------------------------
+# Card presses in on click/tap
+
+soft_press:
+  card_mod:
+    style: |
+      ha-card {
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+      }
+      ha-card:active {
+        transform: scale(0.98);
+        box-shadow: 
+          inset 5px 5px 10px rgba(163, 177, 198, 0.5), 
+          inset -5px -5px 10px rgba(255, 255, 255, 0.7) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# 7. COMBINED: GRADIENT + HOVER + PRESS
+# -----------------------------------------------------------------------------
+# Full interactive experience
+
+full_interactive:
+  card_mod:
+    style: |
+      ha-card {
+        background: 
+          linear-gradient(
+            180deg,
+            rgba(135, 180, 220, 0.5) 0%,
+            rgba(135, 180, 220, 0.2) 15%,
+            var(--ha-card-background, #E4E8EE) 20%
+          ) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      }
+      ha-card:hover {
+        transform: translateY(-3px);
+        filter: brightness(1.02);
+        box-shadow: 12px 12px 24px rgba(163, 177, 198, 0.7), 
+                    -12px -12px 24px rgba(255, 255, 255, 0.9) !important;
+      }
+      ha-card:active {
+        transform: translateY(0) scale(0.98);
+        box-shadow: 
+          inset 4px 4px 8px rgba(163, 177, 198, 0.4), 
+          inset -4px -4px 8px rgba(255, 255, 255, 0.6) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# 8. DARK MODE VARIANTS
+# -----------------------------------------------------------------------------
+
+dark_pulse_shadow:
+  card_mod:
+    style: |
+      ha-card {
+        animation: dark-pulse 2.5s ease-in-out infinite;
+      }
+      @keyframes dark-pulse {
+        0%, 100% {
+          box-shadow: 6px 6px 12px rgba(18, 18, 20, 0.7), 
+                      -6px -6px 12px rgba(58, 58, 62, 0.6);
+        }
+        50% {
+          box-shadow: 10px 10px 20px rgba(18, 18, 20, 0.8), 
+                      -10px -10px 20px rgba(68, 68, 72, 0.7);
+        }
+      }
+
+dark_gradient_shimmer:
+  card_mod:
+    style: |
+      ha-card {
+        background: 
+          linear-gradient(
+            180deg,
+            rgba(107, 155, 210, 0.25) 0%,
+            rgba(107, 155, 210, 0.1) 15%,
+            var(--ha-card-background, #2A2A2E) 20%
+          ) !important;
+        animation: dark-shimmer 3s ease-in-out infinite;
+      }
+      @keyframes dark-shimmer {
+        0%, 100% { filter: brightness(1); }
+        50% { filter: brightness(1.05); }
+      }
+
+# =============================================================================
+# USAGE EXAMPLE
+# =============================================================================
+# 
+# type: custom:mushroom-climate-card
+# entity: climate.living_room
+# card_mod:
+#   style: |
+#     ha-card {
+#       background: 
+#         linear-gradient(
+#           180deg,
+#           rgba(135, 180, 220, 0.5) 0%,
+#           rgba(135, 180, 220, 0.2) 15%,
+#           var(--ha-card-background, #E4E8EE) 20%
+#         ) !important;
+#       transition: transform 0.3s ease, box-shadow 0.3s ease;
+#     }
+#     ha-card:hover {
+#       transform: translateY(-3px);
+#       box-shadow: 12px 12px 24px rgba(163, 177, 198, 0.7), 
+#                   -12px -12px 24px rgba(255, 255, 255, 0.9) !important;
+#     }
+#
+# =============================================================================
