@@ -1,0 +1,314 @@
+# =============================================================================
+# FULL NEUMORPHIC THEME FOR HOME ASSISTANT
+# =============================================================================
+# A premium neumorphic (soft UI) theme with light and dark modes
+# Version: 1.0.0
+# Author: Lovable AI
+# License: MIT
+# 
+# Features:
+# - Complete neumorphic design system with convex/concave shadows
+# - Premium typography (Inter + Plus Jakarta Sans)
+# - Full coverage of HA theme variables
+# - Optimized for readability and accessibility
+# - Works beautifully with Mushroom cards
+# =============================================================================
+
+Full Neumorphic:
+  # ============================================================================
+  # MODE DEFINITIONS - Light and Dark
+  # ============================================================================
+  modes:
+    light:
+      # ========================================================================
+      # NEUMORPHIC DESIGN TOKENS - LIGHT MODE
+      # ========================================================================
+      
+      # --- Core Neumorphic Colors ---
+      # Base surface: warm off-white for soft, premium feel
+      neumorphic-base: "#E8E2D9"
+      neumorphic-base-rgb: "232, 226, 217"
+      neumorphic-raised: "#F0EAE1"
+      neumorphic-inset: "#DED8CF"
+      
+      # Shadow colors for 3D effect
+      neumorphic-shadow-light: "rgba(255, 255, 255, 0.8)"
+      neumorphic-shadow-dark: "rgba(174, 168, 159, 0.5)"
+      neumorphic-shadow-light-strong: "rgba(255, 255, 255, 0.95)"
+      neumorphic-shadow-dark-strong: "rgba(150, 144, 135, 0.6)"
+      
+      # Convex (raised) shadow - cards, buttons
+      neumorphic-convex-shadow: "6px 6px 12px rgba(174, 168, 159, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.8)"
+      neumorphic-convex-shadow-sm: "3px 3px 6px rgba(174, 168, 159, 0.4), -3px -3px 6px rgba(255, 255, 255, 0.7)"
+      neumorphic-convex-shadow-lg: "10px 10px 20px rgba(174, 168, 159, 0.55), -10px -10px 20px rgba(255, 255, 255, 0.85)"
+      
+      # Concave (inset) shadow - inputs, pressed states
+      neumorphic-concave-shadow: "inset 4px 4px 8px rgba(174, 168, 159, 0.5), inset -4px -4px 8px rgba(255, 255, 255, 0.8)"
+      neumorphic-concave-shadow-sm: "inset 2px 2px 4px rgba(174, 168, 159, 0.4), inset -2px -2px 4px rgba(255, 255, 255, 0.7)"
+      
+      # --- Text Colors ---
+      primary-text-color: "#2D3142"
+      secondary-text-color: "#5C6378"
+      text-primary-color: "#FFFFFF"
+      disabled-text-color: "#9BA3B5"
+      text-light-primary-color: "#F5F5F5"
+      
+      # --- Primary Accent Colors ---
+      # Sophisticated blue-slate for premium feel
+      primary-color: "#4A6FA5"
+      dark-primary-color: "#3A5A8A"
+      light-primary-color: "#7A9FD5"
+      accent-color: "#D4A574"
+      
+      # --- Background Colors ---
+      primary-background-color: "#E8E2D9"
+      secondary-background-color: "#DED8CF"
+      card-background-color: "#E8E2D9"
+      divider-color: "rgba(45, 49, 66, 0.08)"
+      
+      # --- State Colors ---
+      state-icon-color: "#5C6378"
+      state-icon-active-color: "#4A6FA5"
+      state-icon-unavailable-color: "#9BA3B5"
+      state-on-color: "#4A9F6E"
+      state-off-color: "#9BA3B5"
+      
+      # Success/Warning/Error
+      success-color: "#4A9F6E"
+      warning-color: "#D4A574"
+      error-color: "#C75B5B"
+      info-color: "#4A6FA5"
+      
+      # --- Card Styling ---
+      ha-card-background: "#E8E2D9"
+      ha-card-border-radius: "16px"
+      ha-card-border-width: "0px"
+      ha-card-border-color: "transparent"
+      ha-card-box-shadow: "6px 6px 12px rgba(174, 168, 159, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.8)"
+      
+      # --- Header ---
+      app-header-background-color: "#E8E2D9"
+      app-header-text-color: "#2D3142"
+      app-header-edit-background-color: "#DED8CF"
+      app-header-edit-text-color: "#2D3142"
+      
+      # --- Sidebar ---
+      sidebar-background-color: "#E8E2D9"
+      sidebar-text-color: "#2D3142"
+      sidebar-icon-color: "#5C6378"
+      sidebar-selected-background-color: "#DED8CF"
+      sidebar-selected-text-color: "#4A6FA5"
+      sidebar-selected-icon-color: "#4A6FA5"
+      
+      # --- Dialog / Modal ---
+      dialog-backdrop-filter: "blur(8px)"
+      mdc-dialog-scrim-color: "rgba(45, 49, 66, 0.3)"
+      
+      # --- Buttons / Controls ---
+      mdc-button-raised-box-shadow: "4px 4px 8px rgba(174, 168, 159, 0.5), -4px -4px 8px rgba(255, 255, 255, 0.8)"
+      
+      # Sliders
+      slider-color: "#4A6FA5"
+      slider-bar-color: "#DED8CF"
+      slider-secondary-color: "#7A9FD5"
+      
+      # Toggles / Switches  
+      toggle-button-color: "#4A6FA5"
+      toggle-button-unchecked-color: "#9BA3B5"
+      switch-checked-color: "#4A6FA5"
+      switch-unchecked-color: "#9BA3B5"
+      switch-checked-track-color: "#7A9FD5"
+      switch-unchecked-track-color: "#DED8CF"
+      
+      # --- Input Fields ---
+      input-fill-color: "#DED8CF"
+      input-ink-color: "#2D3142"
+      input-label-ink-color: "#5C6378"
+      input-idle-line-color: "transparent"
+      input-hover-line-color: "#4A6FA5"
+      input-disabled-fill-color: "#E8E2D9"
+      input-disabled-ink-color: "#9BA3B5"
+      
+      # --- Labels / Badges ---
+      label-badge-background-color: "#E8E2D9"
+      label-badge-text-color: "#2D3142"
+      label-badge-red: "#C75B5B"
+      label-badge-green: "#4A9F6E"
+      label-badge-blue: "#4A6FA5"
+      label-badge-yellow: "#D4A574"
+      label-badge-grey: "#9BA3B5"
+      
+      # --- Scrollbar ---
+      scrollbar-thumb-color: "rgba(45, 49, 66, 0.2)"
+      
+      # --- Toast / Notifications ---
+      paper-toast-background-color: "#2D3142"
+      paper-toast-color: "#F5F5F5"
+      
+      # --- Code Editor ---
+      code-editor-background-color: "#DED8CF"
+      codemirror-atom: "#C75B5B"
+      codemirror-comment: "#9BA3B5"
+      codemirror-keyword: "#4A6FA5"
+      codemirror-string: "#4A9F6E"
+      codemirror-number: "#D4A574"
+      
+      # --- Layout Spacing ---
+      masonry-view-card-margin: "8px"
+      grid-card-gap: "16px"
+      stack-card-margin: "8px"
+      horizontal-stack-card-margin: "0 8px"
+      vertical-stack-card-margin: "8px 0"
+      
+      # --- Chip Styling ---
+      chip-background-color: "#DED8CF"
+      chip-text-color: "#2D3142"
+      chip-icon-color: "#5C6378"
+      chip-box-shadow: "3px 3px 6px rgba(174, 168, 159, 0.4), -3px -3px 6px rgba(255, 255, 255, 0.7)"
+
+    dark:
+      # ========================================================================
+      # NEUMORPHIC DESIGN TOKENS - DARK MODE
+      # ========================================================================
+      
+      # --- Core Neumorphic Colors ---
+      # Base surface: rich charcoal for depth
+      neumorphic-base: "#2A2A2E"
+      neumorphic-base-rgb: "42, 42, 46"
+      neumorphic-raised: "#323236"
+      neumorphic-inset: "#222226"
+      
+      # Shadow colors for 3D effect
+      neumorphic-shadow-light: "rgba(58, 58, 62, 0.6)"
+      neumorphic-shadow-dark: "rgba(18, 18, 20, 0.7)"
+      neumorphic-shadow-light-strong: "rgba(68, 68, 72, 0.7)"
+      neumorphic-shadow-dark-strong: "rgba(10, 10, 12, 0.8)"
+      
+      # Convex (raised) shadow - cards, buttons
+      neumorphic-convex-shadow: "6px 6px 12px rgba(18, 18, 20, 0.7), -6px -6px 12px rgba(58, 58, 62, 0.6)"
+      neumorphic-convex-shadow-sm: "3px 3px 6px rgba(18, 18, 20, 0.6), -3px -3px 6px rgba(58, 58, 62, 0.5)"
+      neumorphic-convex-shadow-lg: "10px 10px 20px rgba(18, 18, 20, 0.75), -10px -10px 20px rgba(58, 58, 62, 0.65)"
+      
+      # Concave (inset) shadow - inputs, pressed states
+      neumorphic-concave-shadow: "inset 4px 4px 8px rgba(18, 18, 20, 0.7), inset -4px -4px 8px rgba(58, 58, 62, 0.6)"
+      neumorphic-concave-shadow-sm: "inset 2px 2px 4px rgba(18, 18, 20, 0.6), inset -2px -2px 4px rgba(58, 58, 62, 0.5)"
+      
+      # --- Text Colors ---
+      primary-text-color: "#E8E4DF"
+      secondary-text-color: "#A8A4A0"
+      text-primary-color: "#121214"
+      disabled-text-color: "#6A6A6E"
+      text-light-primary-color: "#E8E4DF"
+      
+      # --- Primary Accent Colors ---
+      # Vibrant blue for dark mode contrast
+      primary-color: "#6B9BD2"
+      dark-primary-color: "#5585BC"
+      light-primary-color: "#8BB5E8"
+      accent-color: "#E8B896"
+      
+      # --- Background Colors ---
+      primary-background-color: "#2A2A2E"
+      secondary-background-color: "#222226"
+      card-background-color: "#2A2A2E"
+      divider-color: "rgba(232, 228, 223, 0.08)"
+      
+      # --- State Colors ---
+      state-icon-color: "#A8A4A0"
+      state-icon-active-color: "#6B9BD2"
+      state-icon-unavailable-color: "#6A6A6E"
+      state-on-color: "#6BC78E"
+      state-off-color: "#6A6A6E"
+      
+      # Success/Warning/Error
+      success-color: "#6BC78E"
+      warning-color: "#E8B896"
+      error-color: "#E87B7B"
+      info-color: "#6B9BD2"
+      
+      # --- Card Styling ---
+      ha-card-background: "#2A2A2E"
+      ha-card-border-radius: "16px"
+      ha-card-border-width: "0px"
+      ha-card-border-color: "transparent"
+      ha-card-box-shadow: "6px 6px 12px rgba(18, 18, 20, 0.7), -6px -6px 12px rgba(58, 58, 62, 0.6)"
+      
+      # --- Header ---
+      app-header-background-color: "#2A2A2E"
+      app-header-text-color: "#E8E4DF"
+      app-header-edit-background-color: "#222226"
+      app-header-edit-text-color: "#E8E4DF"
+      
+      # --- Sidebar ---
+      sidebar-background-color: "#2A2A2E"
+      sidebar-text-color: "#E8E4DF"
+      sidebar-icon-color: "#A8A4A0"
+      sidebar-selected-background-color: "#222226"
+      sidebar-selected-text-color: "#6B9BD2"
+      sidebar-selected-icon-color: "#6B9BD2"
+      
+      # --- Dialog / Modal ---
+      dialog-backdrop-filter: "blur(8px)"
+      mdc-dialog-scrim-color: "rgba(10, 10, 12, 0.6)"
+      
+      # --- Buttons / Controls ---
+      mdc-button-raised-box-shadow: "4px 4px 8px rgba(18, 18, 20, 0.7), -4px -4px 8px rgba(58, 58, 62, 0.6)"
+      
+      # Sliders
+      slider-color: "#6B9BD2"
+      slider-bar-color: "#222226"
+      slider-secondary-color: "#8BB5E8"
+      
+      # Toggles / Switches  
+      toggle-button-color: "#6B9BD2"
+      toggle-button-unchecked-color: "#6A6A6E"
+      switch-checked-color: "#6B9BD2"
+      switch-unchecked-color: "#6A6A6E"
+      switch-checked-track-color: "#8BB5E8"
+      switch-unchecked-track-color: "#222226"
+      
+      # --- Input Fields ---
+      input-fill-color: "#222226"
+      input-ink-color: "#E8E4DF"
+      input-label-ink-color: "#A8A4A0"
+      input-idle-line-color: "transparent"
+      input-hover-line-color: "#6B9BD2"
+      input-disabled-fill-color: "#2A2A2E"
+      input-disabled-ink-color: "#6A6A6E"
+      
+      # --- Labels / Badges ---
+      label-badge-background-color: "#2A2A2E"
+      label-badge-text-color: "#E8E4DF"
+      label-badge-red: "#E87B7B"
+      label-badge-green: "#6BC78E"
+      label-badge-blue: "#6B9BD2"
+      label-badge-yellow: "#E8B896"
+      label-badge-grey: "#6A6A6E"
+      
+      # --- Scrollbar ---
+      scrollbar-thumb-color: "rgba(232, 228, 223, 0.15)"
+      
+      # --- Toast / Notifications ---
+      paper-toast-background-color: "#E8E4DF"
+      paper-toast-color: "#2A2A2E"
+      
+      # --- Code Editor ---
+      code-editor-background-color: "#222226"
+      codemirror-atom: "#E87B7B"
+      codemirror-comment: "#6A6A6E"
+      codemirror-keyword: "#6B9BD2"
+      codemirror-string: "#6BC78E"
+      codemirror-number: "#E8B896"
+      
+      # --- Layout Spacing ---
+      masonry-view-card-margin: "8px"
+      grid-card-gap: "16px"
+      stack-card-margin: "8px"
+      horizontal-stack-card-margin: "0 8px"
+      vertical-stack-card-margin: "8px 0"
+      
+      # --- Chip Styling ---
+      chip-background-color: "#222226"
+      chip-text-color: "#E8E4DF"
+      chip-icon-color: "#A8A4A0"
+      chip-box-shadow: "3px 3px 6px rgba(18, 18, 20, 0.6), -3px -3px 6px rgba(58, 58, 62, 0.5)"

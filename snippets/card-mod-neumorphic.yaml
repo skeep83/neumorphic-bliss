@@ -1,0 +1,448 @@
+# =============================================================================
+# CARD-MOD NEUMORPHIC SNIPPETS
+# =============================================================================
+# Pro-level CSS snippets for deep neumorphic styling
+# Requires: card-mod (https://github.com/thomasloven/lovelace-card-mod)
+# 
+# Usage: Add these snippets to your cards for enhanced neumorphism
+# =============================================================================
+
+
+# =============================================================================
+# LIGHT MODE SNIPPETS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Base Ha-Card - Convex (Raised) Effect
+# -----------------------------------------------------------------------------
+# Add to any card for neumorphic raised appearance
+ha_card_convex_light: &ha_card_convex_light
+  card_mod:
+    style: |
+      ha-card {
+        background: #E8E2D9 !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          6px 6px 12px rgba(174, 168, 159, 0.5),
+          -6px -6px 12px rgba(255, 255, 255, 0.8) !important;
+        transition: all 0.3s ease !important;
+      }
+      ha-card:hover {
+        box-shadow: 
+          8px 8px 16px rgba(174, 168, 159, 0.55),
+          -8px -8px 16px rgba(255, 255, 255, 0.85) !important;
+        transform: translateY(-2px);
+      }
+
+# -----------------------------------------------------------------------------
+# Ha-Card - Concave (Pressed) Effect  
+# -----------------------------------------------------------------------------
+# Use for active/selected states or input containers
+ha_card_concave_light: &ha_card_concave_light
+  card_mod:
+    style: |
+      ha-card {
+        background: #E8E2D9 !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          inset 4px 4px 8px rgba(174, 168, 159, 0.5),
+          inset -4px -4px 8px rgba(255, 255, 255, 0.8) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Ha-Card - Flat Neumorphic (Subtle)
+# -----------------------------------------------------------------------------
+# Minimal shadow for less prominent cards
+ha_card_flat_light: &ha_card_flat_light
+  card_mod:
+    style: |
+      ha-card {
+        background: #E8E2D9 !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          3px 3px 6px rgba(174, 168, 159, 0.35),
+          -3px -3px 6px rgba(255, 255, 255, 0.6) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Mushroom Card - Full Neumorphic Light
+# -----------------------------------------------------------------------------
+mushroom_card_light: &mushroom_card_light
+  card_mod:
+    style: |
+      ha-card {
+        background: #E8E2D9 !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          6px 6px 12px rgba(174, 168, 159, 0.5),
+          -6px -6px 12px rgba(255, 255, 255, 0.8) !important;
+        --primary-text-color: #2D3142;
+        --secondary-text-color: #5C6378;
+      }
+      mushroom-shape-icon {
+        background: #DED8CF !important;
+        box-shadow: 
+          inset 2px 2px 4px rgba(174, 168, 159, 0.4),
+          inset -2px -2px 4px rgba(255, 255, 255, 0.7) !important;
+      }
+      mushroom-state-info {
+        --primary-text-color: #2D3142;
+        --secondary-text-color: #5C6378;
+      }
+
+# -----------------------------------------------------------------------------
+# Mushroom Chips - Neumorphic Light
+# -----------------------------------------------------------------------------
+mushroom_chips_light: &mushroom_chips_light
+  card_mod:
+    style: |
+      ha-card {
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+      mushroom-chip {
+        background: #E8E2D9 !important;
+        border-radius: 12px !important;
+        box-shadow: 
+          3px 3px 6px rgba(174, 168, 159, 0.4),
+          -3px -3px 6px rgba(255, 255, 255, 0.7) !important;
+        --chip-background: #E8E2D9;
+        --chip-padding: 8px 12px;
+      }
+      mushroom-chip:active {
+        box-shadow: 
+          inset 2px 2px 4px rgba(174, 168, 159, 0.4),
+          inset -2px -2px 4px rgba(255, 255, 255, 0.7) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Tile Card - Neumorphic Light
+# -----------------------------------------------------------------------------
+tile_card_light: &tile_card_light
+  card_mod:
+    style: |
+      ha-card {
+        background: #E8E2D9 !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          6px 6px 12px rgba(174, 168, 159, 0.5),
+          -6px -6px 12px rgba(255, 255, 255, 0.8) !important;
+      }
+      .tile {
+        background: transparent !important;
+      }
+      .icon-container {
+        background: #DED8CF !important;
+        box-shadow: 
+          inset 2px 2px 4px rgba(174, 168, 159, 0.4),
+          inset -2px -2px 4px rgba(255, 255, 255, 0.7) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Button Card - Neumorphic Light
+# -----------------------------------------------------------------------------
+button_card_light: &button_card_light
+  card_mod:
+    style: |
+      ha-card {
+        background: #E8E2D9 !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          5px 5px 10px rgba(174, 168, 159, 0.5),
+          -5px -5px 10px rgba(255, 255, 255, 0.8) !important;
+        transition: all 0.2s ease !important;
+      }
+      ha-card:active {
+        box-shadow: 
+          inset 3px 3px 6px rgba(174, 168, 159, 0.5),
+          inset -3px -3px 6px rgba(255, 255, 255, 0.8) !important;
+        transform: scale(0.98);
+      }
+
+
+# =============================================================================
+# DARK MODE SNIPPETS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Base Ha-Card - Convex (Raised) Effect
+# -----------------------------------------------------------------------------
+ha_card_convex_dark: &ha_card_convex_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: #2A2A2E !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          6px 6px 12px rgba(18, 18, 20, 0.7),
+          -6px -6px 12px rgba(58, 58, 62, 0.6) !important;
+        transition: all 0.3s ease !important;
+      }
+      ha-card:hover {
+        box-shadow: 
+          8px 8px 16px rgba(18, 18, 20, 0.75),
+          -8px -8px 16px rgba(58, 58, 62, 0.65) !important;
+        transform: translateY(-2px);
+      }
+
+# -----------------------------------------------------------------------------
+# Ha-Card - Concave (Pressed) Effect
+# -----------------------------------------------------------------------------
+ha_card_concave_dark: &ha_card_concave_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: #2A2A2E !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          inset 4px 4px 8px rgba(18, 18, 20, 0.7),
+          inset -4px -4px 8px rgba(58, 58, 62, 0.6) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Ha-Card - Flat Neumorphic (Subtle)
+# -----------------------------------------------------------------------------
+ha_card_flat_dark: &ha_card_flat_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: #2A2A2E !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          3px 3px 6px rgba(18, 18, 20, 0.5),
+          -3px -3px 6px rgba(58, 58, 62, 0.4) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Mushroom Card - Full Neumorphic Dark
+# -----------------------------------------------------------------------------
+mushroom_card_dark: &mushroom_card_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: #2A2A2E !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          6px 6px 12px rgba(18, 18, 20, 0.7),
+          -6px -6px 12px rgba(58, 58, 62, 0.6) !important;
+        --primary-text-color: #E8E4DF;
+        --secondary-text-color: #A8A4A0;
+      }
+      mushroom-shape-icon {
+        background: #222226 !important;
+        box-shadow: 
+          inset 2px 2px 4px rgba(18, 18, 20, 0.6),
+          inset -2px -2px 4px rgba(58, 58, 62, 0.5) !important;
+      }
+      mushroom-state-info {
+        --primary-text-color: #E8E4DF;
+        --secondary-text-color: #A8A4A0;
+      }
+
+# -----------------------------------------------------------------------------
+# Mushroom Chips - Neumorphic Dark
+# -----------------------------------------------------------------------------
+mushroom_chips_dark: &mushroom_chips_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+      mushroom-chip {
+        background: #2A2A2E !important;
+        border-radius: 12px !important;
+        box-shadow: 
+          3px 3px 6px rgba(18, 18, 20, 0.6),
+          -3px -3px 6px rgba(58, 58, 62, 0.5) !important;
+        --chip-background: #2A2A2E;
+        --chip-padding: 8px 12px;
+      }
+      mushroom-chip:active {
+        box-shadow: 
+          inset 2px 2px 4px rgba(18, 18, 20, 0.6),
+          inset -2px -2px 4px rgba(58, 58, 62, 0.5) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Tile Card - Neumorphic Dark
+# -----------------------------------------------------------------------------
+tile_card_dark: &tile_card_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: #2A2A2E !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          6px 6px 12px rgba(18, 18, 20, 0.7),
+          -6px -6px 12px rgba(58, 58, 62, 0.6) !important;
+      }
+      .tile {
+        background: transparent !important;
+      }
+      .icon-container {
+        background: #222226 !important;
+        box-shadow: 
+          inset 2px 2px 4px rgba(18, 18, 20, 0.6),
+          inset -2px -2px 4px rgba(58, 58, 62, 0.5) !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Button Card - Neumorphic Dark
+# -----------------------------------------------------------------------------
+button_card_dark: &button_card_dark
+  card_mod:
+    style: |
+      ha-card {
+        background: #2A2A2E !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: 
+          5px 5px 10px rgba(18, 18, 20, 0.7),
+          -5px -5px 10px rgba(58, 58, 62, 0.6) !important;
+        transition: all 0.2s ease !important;
+      }
+      ha-card:active {
+        box-shadow: 
+          inset 3px 3px 6px rgba(18, 18, 20, 0.7),
+          inset -3px -3px 6px rgba(58, 58, 62, 0.6) !important;
+        transform: scale(0.98);
+      }
+
+
+# =============================================================================
+# UNIVERSAL / AUTO-MODE SNIPPETS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Auto-detect theme mode (uses CSS custom properties from theme)
+# -----------------------------------------------------------------------------
+# These snippets automatically adapt to light/dark mode based on 
+# the current theme's --neumorphic-base variable
+
+ha_card_convex_auto:
+  card_mod:
+    style: |
+      ha-card {
+        background: var(--card-background-color) !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: var(--ha-card-box-shadow) !important;
+        transition: all 0.3s ease !important;
+      }
+
+mushroom_card_auto:
+  card_mod:
+    style: |
+      ha-card {
+        background: var(--card-background-color) !important;
+        border-radius: 16px !important;
+        border: none !important;
+        box-shadow: var(--ha-card-box-shadow) !important;
+      }
+      mushroom-shape-icon {
+        background: var(--secondary-background-color) !important;
+        box-shadow: var(--neumorphic-concave-shadow-sm) !important;
+      }
+
+
+# =============================================================================
+# GLOBAL CARD-MOD THEME (Apply to all cards at once)
+# =============================================================================
+# Add this to your dashboard YAML for universal neumorphic styling:
+#
+# card_mod:
+#   style:
+#     .: |
+#       ha-card {
+#         background: var(--card-background-color) !important;
+#         border-radius: 16px !important;
+#         border: none !important;
+#         box-shadow: var(--ha-card-box-shadow) !important;
+#       }
+# =============================================================================
+
+
+# =============================================================================
+# ADDITIONAL ELEMENT SNIPPETS
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Neumorphic Toggle/Switch
+# -----------------------------------------------------------------------------
+toggle_neumorphic:
+  card_mod:
+    style: |
+      ha-switch {
+        --switch-checked-track-color: var(--primary-color);
+        --switch-unchecked-track-color: var(--secondary-background-color);
+      }
+      ha-switch::part(track) {
+        box-shadow: 
+          inset 2px 2px 4px var(--neumorphic-shadow-dark),
+          inset -2px -2px 4px var(--neumorphic-shadow-light);
+        border-radius: 14px;
+      }
+
+# -----------------------------------------------------------------------------
+# Neumorphic Slider
+# -----------------------------------------------------------------------------
+slider_neumorphic:
+  card_mod:
+    style: |
+      ha-slider {
+        --paper-slider-active-color: var(--primary-color);
+        --paper-slider-container-color: var(--secondary-background-color);
+      }
+      ha-slider::part(track) {
+        box-shadow: 
+          inset 2px 2px 4px var(--neumorphic-shadow-dark),
+          inset -2px -2px 4px var(--neumorphic-shadow-light);
+      }
+
+# -----------------------------------------------------------------------------
+# Neumorphic Input Field
+# -----------------------------------------------------------------------------
+input_neumorphic:
+  card_mod:
+    style: |
+      ha-textfield {
+        background: var(--secondary-background-color) !important;
+        border-radius: 12px !important;
+        box-shadow: 
+          inset 3px 3px 6px var(--neumorphic-shadow-dark),
+          inset -3px -3px 6px var(--neumorphic-shadow-light) !important;
+        border: none !important;
+        padding: 12px 16px !important;
+      }
+
+# -----------------------------------------------------------------------------
+# Neumorphic Icon Button
+# -----------------------------------------------------------------------------
+icon_button_neumorphic:
+  card_mod:
+    style: |
+      ha-icon-button {
+        background: var(--card-background-color) !important;
+        border-radius: 50% !important;
+        box-shadow: 
+          4px 4px 8px var(--neumorphic-shadow-dark),
+          -4px -4px 8px var(--neumorphic-shadow-light) !important;
+        transition: all 0.2s ease !important;
+      }
+      ha-icon-button:active {
+        box-shadow: 
+          inset 2px 2px 4px var(--neumorphic-shadow-dark),
+          inset -2px -2px 4px var(--neumorphic-shadow-light) !important;
+      }

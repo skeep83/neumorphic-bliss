@@ -1,96 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* =============================================================================
+   FULL NEUMORPHIC THEME - DESIGN SYSTEM
+   Premium neumorphic (soft UI) design tokens for Home Assistant theme preview
+   ============================================================================= */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* --- Typography --- */
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Plus Jakarta Sans', var(--font-sans);
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* --- Neumorphic Light Mode Colors --- */
+    --neumorphic-base: 232 15% 88%;
+    --neumorphic-raised: 232 15% 92%;
+    --neumorphic-inset: 232 15% 82%;
+    
+    /* Shadow colors */
+    --shadow-light: 0 0% 100%;
+    --shadow-dark: 232 10% 65%;
+    
+    /* Text colors */
+    --text-primary: 230 25% 18%;
+    --text-secondary: 230 15% 40%;
+    --text-muted: 230 10% 60%;
+    
+    /* Accent colors */
+    --accent-primary: 216 45% 47%;
+    --accent-primary-light: 216 50% 65%;
+    --accent-warm: 28 50% 64%;
+    --accent-success: 145 40% 46%;
+    --accent-warning: 28 55% 64%;
+    --accent-error: 0 55% 57%;
+    
+    /* Standard tokens mapped to neumorphic */
+    --background: var(--neumorphic-base);
+    --foreground: var(--text-primary);
+    --card: var(--neumorphic-base);
+    --card-foreground: var(--text-primary);
+    --popover: var(--neumorphic-raised);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-primary);
+    --primary-foreground: 0 0% 100%;
+    --secondary: var(--neumorphic-inset);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--neumorphic-inset);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--accent-warm);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--accent-error);
+    --destructive-foreground: 0 0% 100%;
+    --border: 232 15% 80%;
+    --input: var(--neumorphic-inset);
+    --ring: var(--accent-primary);
+    --radius: 1rem;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* --- Neumorphic Shadows --- */
+    --shadow-convex: 
+      6px 6px 12px hsl(var(--shadow-dark) / 0.5),
+      -6px -6px 12px hsl(var(--shadow-light) / 0.8);
+    --shadow-convex-sm: 
+      3px 3px 6px hsl(var(--shadow-dark) / 0.4),
+      -3px -3px 6px hsl(var(--shadow-light) / 0.7);
+    --shadow-convex-lg: 
+      10px 10px 20px hsl(var(--shadow-dark) / 0.55),
+      -10px -10px 20px hsl(var(--shadow-light) / 0.85);
+    --shadow-concave: 
+      inset 4px 4px 8px hsl(var(--shadow-dark) / 0.5),
+      inset -4px -4px 8px hsl(var(--shadow-light) / 0.8);
+    --shadow-concave-sm: 
+      inset 2px 2px 4px hsl(var(--shadow-dark) / 0.4),
+      inset -2px -2px 4px hsl(var(--shadow-light) / 0.7);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar tokens */
+    --sidebar-background: var(--neumorphic-base);
+    --sidebar-foreground: var(--text-primary);
+    --sidebar-primary: var(--accent-primary);
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: var(--neumorphic-inset);
+    --sidebar-accent-foreground: var(--text-primary);
+    --sidebar-border: var(--border);
+    --sidebar-ring: var(--accent-primary);
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  /* --- Dark Mode --- */
+  .dark, .dark-mode {
+    --neumorphic-base: 240 4% 16%;
+    --neumorphic-raised: 240 4% 20%;
+    --neumorphic-inset: 240 4% 12%;
+    
+    --shadow-light: 240 4% 22%;
+    --shadow-dark: 240 6% 6%;
+    
+    --text-primary: 40 10% 90%;
+    --text-secondary: 40 5% 65%;
+    --text-muted: 40 3% 45%;
+    
+    --accent-primary: 213 55% 62%;
+    --accent-primary-light: 213 60% 75%;
+    --accent-warm: 25 60% 72%;
+    --accent-success: 145 50% 55%;
+    --accent-warning: 25 65% 72%;
+    --accent-error: 0 60% 65%;
+    
+    --background: var(--neumorphic-base);
+    --foreground: var(--text-primary);
+    --card: var(--neumorphic-base);
+    --card-foreground: var(--text-primary);
+    --popover: var(--neumorphic-raised);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--accent-primary);
+    --primary-foreground: 240 4% 12%;
+    --secondary: var(--neumorphic-inset);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--neumorphic-inset);
+    --muted-foreground: var(--text-muted);
+    --accent: var(--accent-warm);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--accent-error);
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 4% 22%;
+    --input: var(--neumorphic-inset);
+    --ring: var(--accent-primary);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --shadow-convex: 
+      6px 6px 12px hsl(var(--shadow-dark) / 0.7),
+      -6px -6px 12px hsl(var(--shadow-light) / 0.6);
+    --shadow-convex-sm: 
+      3px 3px 6px hsl(var(--shadow-dark) / 0.6),
+      -3px -3px 6px hsl(var(--shadow-light) / 0.5);
+    --shadow-convex-lg: 
+      10px 10px 20px hsl(var(--shadow-dark) / 0.75),
+      -10px -10px 20px hsl(var(--shadow-light) / 0.65);
+    --shadow-concave: 
+      inset 4px 4px 8px hsl(var(--shadow-dark) / 0.7),
+      inset -4px -4px 8px hsl(var(--shadow-light) / 0.6);
+    --shadow-concave-sm: 
+      inset 2px 2px 4px hsl(var(--shadow-dark) / 0.6),
+      inset -2px -2px 4px hsl(var(--shadow-light) / 0.5);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: var(--neumorphic-base);
+    --sidebar-foreground: var(--text-primary);
   }
 }
 
@@ -101,5 +156,302 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* =============================================================================
+   NEUMORPHIC COMPONENT STYLES
+   ============================================================================= */
+
+@layer components {
+  /* --- Layout Containers --- */
+  .light-mode {
+    background: hsl(var(--neumorphic-base));
+    color: hsl(var(--text-primary));
+  }
+
+  .dark-mode {
+    background: hsl(var(--neumorphic-base));
+    color: hsl(var(--text-primary));
+  }
+
+  /* --- Text Utilities --- */
+  .text-primary-text {
+    color: hsl(var(--text-primary));
+  }
+
+  .text-secondary-text {
+    color: hsl(var(--text-secondary));
+  }
+
+  .text-success-text {
+    color: hsl(var(--accent-success));
+  }
+
+  .text-primary {
+    color: hsl(var(--accent-primary));
+  }
+
+  /* --- Font Utilities --- */
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  /* --- Header --- */
+  .header-neumorphic {
+    background: hsl(var(--neumorphic-base));
+    box-shadow: var(--shadow-convex-sm);
+    border-bottom: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  /* --- Cards --- */
+  .card-neumorphic {
+    background: hsl(var(--neumorphic-base)) !important;
+    border-radius: var(--radius) !important;
+    border: none !important;
+    box-shadow: var(--shadow-convex) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .card-neumorphic:hover {
+    box-shadow: var(--shadow-convex-lg) !important;
+    transform: translateY(-2px);
+  }
+
+  .card-neumorphic-lg {
+    background: hsl(var(--neumorphic-base)) !important;
+    border-radius: calc(var(--radius) * 1.5) !important;
+    border: none !important;
+    box-shadow: var(--shadow-convex-lg) !important;
+  }
+
+  /* --- Icon Containers --- */
+  .icon-container-raised {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: hsl(var(--neumorphic-base));
+    box-shadow: var(--shadow-convex-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-container-inset {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: hsl(var(--neumorphic-inset));
+    box-shadow: var(--shadow-concave-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--text-secondary));
+    transition: all 0.3s ease;
+  }
+
+  .icon-container-inset.icon-active {
+    color: hsl(var(--accent-primary));
+  }
+
+  .icon-container-inset.icon-warning {
+    color: hsl(var(--accent-warning));
+  }
+
+  .icon-container-inset.icon-success {
+    color: hsl(var(--accent-success));
+  }
+
+  /* --- Buttons --- */
+  .btn-neumorphic-primary {
+    background: hsl(var(--accent-primary)) !important;
+    color: hsl(0 0% 100%) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    font-weight: 500 !important;
+    box-shadow: 
+      4px 4px 8px hsl(var(--shadow-dark) / 0.4),
+      -2px -2px 6px hsl(var(--shadow-light) / 0.3),
+      inset 0 1px 0 hsl(0 0% 100% / 0.1) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .btn-neumorphic-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 
+      5px 5px 10px hsl(var(--shadow-dark) / 0.45),
+      -3px -3px 8px hsl(var(--shadow-light) / 0.35),
+      inset 0 1px 0 hsl(0 0% 100% / 0.15) !important;
+  }
+
+  .btn-neumorphic-primary:active {
+    transform: translateY(0);
+    box-shadow: 
+      inset 2px 2px 4px hsl(var(--shadow-dark) / 0.3),
+      inset -2px -2px 4px hsl(var(--shadow-light) / 0.1) !important;
+  }
+
+  .btn-neumorphic-secondary {
+    background: hsl(var(--neumorphic-base)) !important;
+    color: hsl(var(--text-primary)) !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    font-weight: 500 !important;
+    box-shadow: var(--shadow-convex-sm) !important;
+    transition: all 0.2s ease !important;
+  }
+
+  .btn-neumorphic-secondary:hover {
+    box-shadow: var(--shadow-convex) !important;
+    transform: translateY(-1px);
+  }
+
+  .btn-neumorphic-secondary:active {
+    box-shadow: var(--shadow-concave-sm) !important;
+    transform: translateY(0);
+  }
+
+  /* --- Theme Toggle --- */
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: hsl(var(--neumorphic-base));
+    box-shadow: var(--shadow-convex-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(var(--text-secondary));
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+
+  .theme-toggle:hover {
+    color: hsl(var(--accent-primary));
+    box-shadow: var(--shadow-convex);
+  }
+
+  .theme-toggle:active {
+    box-shadow: var(--shadow-concave-sm);
+  }
+
+  /* --- Badges & Chips --- */
+  .badge-neumorphic {
+    background: hsl(var(--neumorphic-base)) !important;
+    color: hsl(var(--accent-primary)) !important;
+    box-shadow: var(--shadow-convex-sm) !important;
+    border: none !important;
+    padding: 6px 14px !important;
+    font-weight: 500 !important;
+  }
+
+  .chip-neumorphic {
+    background: hsl(var(--neumorphic-inset)) !important;
+    color: hsl(var(--text-secondary)) !important;
+    box-shadow: var(--shadow-concave-sm) !important;
+    border: none !important;
+    padding: 4px 10px !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* --- Stat Chips --- */
+  .stat-chip {
+    background: hsl(var(--neumorphic-inset));
+    box-shadow: var(--shadow-concave-sm);
+    border-radius: 10px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  /* --- Action Buttons --- */
+  .action-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 24px;
+    background: hsl(var(--neumorphic-base));
+    box-shadow: var(--shadow-convex-sm);
+    border-radius: 14px;
+    border: none;
+    color: hsl(var(--text-secondary));
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 90px;
+  }
+
+  .action-button:hover {
+    color: hsl(var(--accent-primary));
+    box-shadow: var(--shadow-convex);
+    transform: translateY(-2px);
+  }
+
+  .action-button:active,
+  .action-button.active {
+    box-shadow: var(--shadow-concave);
+    color: hsl(var(--accent-primary));
+    transform: translateY(0);
+  }
+
+  .action-button span {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  /* --- Feature Cards --- */
+  .feature-card {
+    background: hsl(var(--neumorphic-base));
+    box-shadow: var(--shadow-convex-sm);
+    border-radius: 14px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    box-shadow: var(--shadow-convex);
+    transform: translateY(-3px);
+  }
+
+  /* --- Code Block --- */
+  .code-block {
+    background: hsl(var(--neumorphic-inset));
+    box-shadow: var(--shadow-concave);
+    border-radius: 12px;
+    padding: 20px 24px;
+    font-family: var(--font-mono);
+    color: hsl(var(--text-secondary));
+    line-height: 1.7;
+    overflow-x: auto;
+  }
+
+  /* --- Slider Container --- */
+  .slider-container {
+    padding: 8px 0;
+  }
+
+  .slider-neumorphic {
+    --slider-track-bg: hsl(var(--neumorphic-inset));
+    --slider-track-shadow: var(--shadow-concave-sm);
+  }
+
+  /* --- Switch --- */
+  .switch-neumorphic {
+    background: hsl(var(--neumorphic-inset)) !important;
+    box-shadow: var(--shadow-concave-sm) !important;
+  }
+
+  /* --- Footer --- */
+  .footer-neumorphic {
+    background: hsl(var(--neumorphic-inset) / 0.5);
+    border-top: 1px solid hsl(var(--border) / 0.3);
   }
 }
