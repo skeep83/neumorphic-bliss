@@ -25,26 +25,26 @@ Full Neumorphic:
       # ========================================================================
       
       # --- Core Neumorphic Colors ---
-      # Base surface: neutral soft gray for premium feel
-      neumorphic-base: "#E4E4E0"
-      neumorphic-base-rgb: "228, 228, 224"
-      neumorphic-raised: "#EAEAE6"
-      neumorphic-inset: "#DADAD6"
+      # Base surface: clean light gray background
+      neumorphic-base: "#F5F5F7"
+      neumorphic-base-rgb: "245, 245, 247"
+      neumorphic-raised: "#FFFFFF"
+      neumorphic-inset: "#EBEBED"
       
       # Shadow colors for 3D effect
-      neumorphic-shadow-light: "rgba(255, 255, 255, 0.8)"
-      neumorphic-shadow-dark: "rgba(166, 166, 160, 0.5)"
-      neumorphic-shadow-light-strong: "rgba(255, 255, 255, 0.95)"
-      neumorphic-shadow-dark-strong: "rgba(140, 140, 134, 0.6)"
+      neumorphic-shadow-light: "rgba(255, 255, 255, 0.9)"
+      neumorphic-shadow-dark: "rgba(0, 0, 0, 0.08)"
+      neumorphic-shadow-light-strong: "rgba(255, 255, 255, 1)"
+      neumorphic-shadow-dark-strong: "rgba(0, 0, 0, 0.12)"
       
       # Convex (raised) shadow - cards, buttons
-      neumorphic-convex-shadow: "6px 6px 12px rgba(166, 166, 160, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.8)"
-      neumorphic-convex-shadow-sm: "3px 3px 6px rgba(166, 166, 160, 0.4), -3px -3px 6px rgba(255, 255, 255, 0.7)"
-      neumorphic-convex-shadow-lg: "10px 10px 20px rgba(166, 166, 160, 0.55), -10px -10px 20px rgba(255, 255, 255, 0.85)"
+      neumorphic-convex-shadow: "0 4px 14px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04)"
+      neumorphic-convex-shadow-sm: "0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.03)"
+      neumorphic-convex-shadow-lg: "0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.05)"
       
       # Concave (inset) shadow - inputs, pressed states
-      neumorphic-concave-shadow: "inset 4px 4px 8px rgba(166, 166, 160, 0.5), inset -4px -4px 8px rgba(255, 255, 255, 0.8)"
-      neumorphic-concave-shadow-sm: "inset 2px 2px 4px rgba(166, 166, 160, 0.4), inset -2px -2px 4px rgba(255, 255, 255, 0.7)"
+      neumorphic-concave-shadow: "inset 0 2px 4px rgba(0, 0, 0, 0.06)"
+      neumorphic-concave-shadow-sm: "inset 0 1px 2px rgba(0, 0, 0, 0.04)"
       
       # --- Text Colors ---
       primary-text-color: "#2D3142"
@@ -61,9 +61,9 @@ Full Neumorphic:
       accent-color: "#D4A574"
       
       # --- Background Colors ---
-      primary-background-color: "#E4E4E0"
-      secondary-background-color: "#DADAD6"
-      card-background-color: "#E4E4E0"
+      primary-background-color: "#F5F5F7"
+      secondary-background-color: "#EBEBED"
+      card-background-color: "#FFFFFF"
       divider-color: "rgba(45, 49, 66, 0.08)"
       
       # --- State Colors ---
@@ -80,23 +80,23 @@ Full Neumorphic:
       info-color: "#4A6FA5"
       
       # --- Card Styling ---
-      ha-card-background: "#E4E4E0"
+      ha-card-background: "#FFFFFF"
       ha-card-border-radius: "16px"
       ha-card-border-width: "0px"
       ha-card-border-color: "transparent"
-      ha-card-box-shadow: "6px 6px 12px rgba(166, 166, 160, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.8)"
+      ha-card-box-shadow: "0 4px 14px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04)"
       
       # --- Header ---
-      app-header-background-color: "#E4E4E0"
+      app-header-background-color: "#F5F5F7"
       app-header-text-color: "#2D3142"
-      app-header-edit-background-color: "#DADAD6"
+      app-header-edit-background-color: "#EBEBED"
       app-header-edit-text-color: "#2D3142"
       
       # --- Sidebar ---
-      sidebar-background-color: "#E4E4E0"
+      sidebar-background-color: "#F5F5F7"
       sidebar-text-color: "#2D3142"
       sidebar-icon-color: "#5C6378"
-      sidebar-selected-background-color: "#DADAD6"
+      sidebar-selected-background-color: "#FFFFFF"
       sidebar-selected-text-color: "#4A6FA5"
       sidebar-selected-icon-color: "#4A6FA5"
       
@@ -105,11 +105,11 @@ Full Neumorphic:
       mdc-dialog-scrim-color: "rgba(45, 49, 66, 0.3)"
       
       # --- Buttons / Controls ---
-      mdc-button-raised-box-shadow: "4px 4px 8px rgba(166, 166, 160, 0.5), -4px -4px 8px rgba(255, 255, 255, 0.8)"
+      mdc-button-raised-box-shadow: "0 2px 8px rgba(0, 0, 0, 0.08)"
       
       # Sliders
       slider-color: "#4A6FA5"
-      slider-bar-color: "#DADAD6"
+      slider-bar-color: "#EBEBED"
       slider-secondary-color: "#7A9FD5"
       
       # Toggles / Switches  
@@ -118,19 +118,19 @@ Full Neumorphic:
       switch-checked-color: "#4A6FA5"
       switch-unchecked-color: "#9BA3B5"
       switch-checked-track-color: "#7A9FD5"
-      switch-unchecked-track-color: "#DADAD6"
+      switch-unchecked-track-color: "#EBEBED"
       
       # --- Input Fields ---
-      input-fill-color: "#DADAD6"
+      input-fill-color: "#EBEBED"
       input-ink-color: "#2D3142"
       input-label-ink-color: "#5C6378"
       input-idle-line-color: "transparent"
       input-hover-line-color: "#4A6FA5"
-      input-disabled-fill-color: "#E4E4E0"
+      input-disabled-fill-color: "#F5F5F7"
       input-disabled-ink-color: "#9BA3B5"
       
       # --- Labels / Badges ---
-      label-badge-background-color: "#E4E4E0"
+      label-badge-background-color: "#FFFFFF"
       label-badge-text-color: "#2D3142"
       label-badge-red: "#C75B5B"
       label-badge-green: "#4A9F6E"
@@ -146,7 +146,7 @@ Full Neumorphic:
       paper-toast-color: "#F5F5F5"
       
       # --- Code Editor ---
-      code-editor-background-color: "#DADAD6"
+      code-editor-background-color: "#EBEBED"
       codemirror-atom: "#C75B5B"
       codemirror-comment: "#9BA3B5"
       codemirror-keyword: "#4A6FA5"
@@ -161,10 +161,10 @@ Full Neumorphic:
       vertical-stack-card-margin: "8px 0"
       
       # --- Chip Styling ---
-      chip-background-color: "#DADAD6"
+      chip-background-color: "#FFFFFF"
       chip-text-color: "#2D3142"
       chip-icon-color: "#5C6378"
-      chip-box-shadow: "3px 3px 6px rgba(166, 166, 160, 0.4), -3px -3px 6px rgba(255, 255, 255, 0.7)"
+      chip-box-shadow: "0 2px 6px rgba(0, 0, 0, 0.06)"
 
     dark:
       # ========================================================================
