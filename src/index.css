@@ -224,23 +224,17 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(var(--shadow-light) / 0.15) 25%,
-      hsl(var(--shadow-light) / 0.3) 50%,
-      hsl(var(--shadow-light) / 0.15) 75%,
+      180deg,
+      hsl(200 70% 70% / 0.12) 0%,
+      hsl(200 60% 75% / 0.06) 50%,
       transparent 100%
     );
     pointer-events: none;
-    transition: left 0.6s ease;
-  }
-
-  .card-neumorphic:hover::before {
-    left: 100%;
+    border-radius: var(--radius) var(--radius) 0 0;
   }
 
   .card-neumorphic:hover {
@@ -261,23 +255,17 @@
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 50%;
     background: linear-gradient(
-      90deg,
-      transparent 0%,
-      hsl(var(--shadow-light) / 0.15) 25%,
-      hsl(var(--shadow-light) / 0.3) 50%,
-      hsl(var(--shadow-light) / 0.15) 75%,
+      180deg,
+      hsl(200 70% 70% / 0.12) 0%,
+      hsl(200 60% 75% / 0.06) 50%,
       transparent 100%
     );
     pointer-events: none;
-    transition: left 0.6s ease;
-  }
-
-  .card-neumorphic-lg:hover::before {
-    left: 100%;
+    border-radius: calc(var(--radius) * 1.5) calc(var(--radius) * 1.5) 0 0;
   }
 
   /* --- Icon Containers --- */
