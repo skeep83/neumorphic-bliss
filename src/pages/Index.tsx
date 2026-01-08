@@ -5,6 +5,10 @@ import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import CardModAnimationPreview from "@/components/CardModAnimationPreview";
+import ThemeBuilder from "@/components/ThemeBuilder";
+import ComponentGallery from "@/components/ComponentGallery";
+import DeviceCards from "@/components/DeviceCards";
+import PaletteVisualizer from "@/components/PaletteVisualizer";
 import {
   Lightbulb,
   Thermometer,
@@ -185,9 +189,13 @@ const Index = () => {
                 </div>
               </CardContent>
             </Card>
-          </div>
+        </div>
         </section>
 
+        <ThemeBuilder />
+        <PaletteVisualizer />
+        <DeviceCards />
+        <ComponentGallery />
         <CardModAnimationPreview />
 
         {/* Quick Actions */}
