@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,11 +62,26 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Neumorphic specific tokens
+        neumorphic: {
+          base: "hsl(var(--neumorphic-base))",
+          raised: "hsl(var(--neumorphic-raised))",
+          inset: "hsl(var(--neumorphic-inset))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
+        xl: "calc(var(--radius) * 1.5)",
+        "2xl": "calc(var(--radius) * 2)",
+      },
+      boxShadow: {
+        'neumorphic-convex': 'var(--shadow-convex)',
+        'neumorphic-convex-sm': 'var(--shadow-convex-sm)',
+        'neumorphic-convex-lg': 'var(--shadow-convex-lg)',
+        'neumorphic-concave': 'var(--shadow-concave)',
+        'neumorphic-concave-sm': 'var(--shadow-concave-sm)',
       },
       keyframes: {
         "accordion-down": {
