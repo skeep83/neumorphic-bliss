@@ -17,13 +17,13 @@
     --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
 
     /* --- Neumorphic Light Mode Colors --- */
-    --neumorphic-base: 232 15% 88%;
-    --neumorphic-raised: 232 15% 92%;
-    --neumorphic-inset: 232 15% 82%;
+    --neumorphic-base: 60 4% 89%;
+    --neumorphic-raised: 60 4% 92%;
+    --neumorphic-inset: 60 4% 84%;
     
     /* Shadow colors */
     --shadow-light: 0 0% 100%;
-    --shadow-dark: 232 10% 65%;
+    --shadow-dark: 60 4% 65%;
     
     /* Text colors */
     --text-primary: 230 25% 18%;
@@ -55,7 +55,7 @@
     --accent-foreground: var(--text-primary);
     --destructive: var(--accent-error);
     --destructive-foreground: 0 0% 100%;
-    --border: 232 15% 80%;
+    --border: 60 4% 80%;
     --input: var(--neumorphic-inset);
     --ring: var(--accent-primary);
     --radius: 1rem;
