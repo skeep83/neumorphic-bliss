@@ -229,8 +229,8 @@
     height: 60%;
     background: linear-gradient(
       180deg,
-      hsl(200 80% 75% / 0.25) 0%,
-      hsl(205 70% 80% / 0.15) 40%,
+      hsl(200 80% 75% / 0.35) 0%,
+      hsl(205 70% 80% / 0.2) 40%,
       transparent 100%
     );
     pointer-events: none;
@@ -261,8 +261,8 @@
     height: 60%;
     background: linear-gradient(
       180deg,
-      hsl(200 80% 75% / 0.25) 0%,
-      hsl(205 70% 80% / 0.15) 40%,
+      hsl(200 80% 75% / 0.35) 0%,
+      hsl(205 70% 80% / 0.2) 40%,
       transparent 100%
     );
     pointer-events: none;
