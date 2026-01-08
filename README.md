@@ -35,13 +35,13 @@
     <td align="center"><strong>Dark Mode</strong></td>
   </tr>
   <tr>
-    <td><img src="images/light.png" alt="Light Mode" width="400"></td>
-    <td><img src="images/dark.png" alt="Dark Mode" width="400"></td>
+    <td><img src="./images/light.png" alt="Light Mode" width="400"></td>
+    <td><img src="./images/dark.png" alt="Dark Mode" width="400"></td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="images/dashboard.png" alt="Dashboard Example" width="800">
+  <img src="./images/dashboard.png" alt="Dashboard Example" width="800">
 </p>
 
 ---
