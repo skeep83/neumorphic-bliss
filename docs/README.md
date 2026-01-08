@@ -41,7 +41,7 @@ The dark mode uses a rich charcoal (`#2A2A2E`) base with subtle depth, maintaini
 
 1. Open HACS in your Home Assistant
 2. Click on **Frontend** → **⋮** (three dots menu) → **Custom repositories**
-3. Add this repository URL: `https://github.com/lovable-community/ha-full-neumorphic-theme`
+3. Add this repository URL: `https://github.com/ha-community/full-neumorphic-theme`
 4. Select **Theme** as the category
 5. Click **Add**
 6. Find "Full Neumorphic Theme" in the list and click **Download**

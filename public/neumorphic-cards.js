@@ -796,42 +796,42 @@ window.customCards.push(
     name: 'Neumorphic Light Card',
     description: 'A beautiful neumorphic card for controlling lights',
     preview: true,
-    documentationURL: 'https://github.com/lovable-community/ha-neumorphic-cards'
+    documentationURL: 'https://github.com/ha-community/neumorphic-cards'
   },
   {
     type: 'neumorphic-climate-card',
     name: 'Neumorphic Climate Card',
     description: 'A beautiful neumorphic card for climate control',
     preview: true,
-    documentationURL: 'https://github.com/lovable-community/ha-neumorphic-cards'
+    documentationURL: 'https://github.com/ha-community/neumorphic-cards'
   },
   {
     type: 'neumorphic-sensor-card',
     name: 'Neumorphic Sensor Card',
     description: 'A beautiful neumorphic card for displaying sensor data',
     preview: true,
-    documentationURL: 'https://github.com/lovable-community/ha-neumorphic-cards'
+    documentationURL: 'https://github.com/ha-community/neumorphic-cards'
   },
   {
     type: 'neumorphic-button-card',
     name: 'Neumorphic Button Card',
     description: 'A beautiful neumorphic button card',
     preview: true,
-    documentationURL: 'https://github.com/lovable-community/ha-neumorphic-cards'
+    documentationURL: 'https://github.com/ha-community/neumorphic-cards'
   },
   {
     type: 'neumorphic-media-card',
     name: 'Neumorphic Media Card',
     description: 'A beautiful neumorphic card for media players',
     preview: true,
-    documentationURL: 'https://github.com/lovable-community/ha-neumorphic-cards'
+    documentationURL: 'https://github.com/ha-community/neumorphic-cards'
   },
   {
     type: 'neumorphic-fan-card',
     name: 'Neumorphic Fan Card',
     description: 'A beautiful neumorphic card for fan control',
     preview: true,
-    documentationURL: 'https://github.com/lovable-community/ha-neumorphic-cards'
+    documentationURL: 'https://github.com/ha-community/neumorphic-cards'
   }
 );
 
