@@ -8,7 +8,7 @@ Premium neumorphic-styled Lovelace cards with soft 3D shadows and modern design.
 
 1. Open **HACS** → **Frontend**
 2. Click **⋮** (menu) → **Custom repositories**
-3. Add: `https://github.com/lovable-community/ha-neumorphic-cards`
+3. Add: `https://github.com/ha-community/neumorphic-cards`
 4. Select category: **Lovelace**
 5. Click **Download**
 6. Refresh your browser (Ctrl+F5)
