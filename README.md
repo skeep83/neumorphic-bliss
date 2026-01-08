@@ -1,73 +1,53 @@
-# Welcome to your Lovable project
+# Full Neumorphic Theme & Cards for Home Assistant
 
-## Project info
+> 🎨 **Theme** + 🎴 **Custom Cards** — Complete neumorphic UI kit for Home Assistant
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 📦 Two Packages
 
-## How can I edit this code?
+| Package | Type | HACS Category |
+|---------|------|---------------|
+| **Full Neumorphic Theme** | Theme | Theme |
+| **Neumorphic Cards** | Lovelace Plugin | Frontend |
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎴 Neumorphic Cards Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Manual Install
+1. Download `public/neumorphic-cards.js`
+2. Copy to `/config/www/neumorphic-cards.js`
+3. Add resource in **Settings → Dashboards → Resources**:
+   ```yaml
+   url: /local/neumorphic-cards.js
+   type: module
+   ```
+4. Refresh browser (Ctrl+F5)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Usage
+```yaml
+type: custom:neumorphic-light-card
+entity: light.living_room
 
-**Use your preferred IDE**
+type: custom:neumorphic-climate-card
+entity: climate.thermostat
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+type: custom:neumorphic-sensor-card
+entity: sensor.temperature
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+type: custom:neumorphic-button-card
+entity: switch.lamp
 
-Follow these steps:
+type: custom:neumorphic-media-card
+entity: media_player.spotify
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+type: custom:neumorphic-fan-card
+entity: fan.bedroom
 ```
 
-**Edit a file directly in GitHub**
+See `docs/CARDS.md` for full documentation.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🎨 Theme Installation
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+See `docs/README.md` for theme installation via HACS.
