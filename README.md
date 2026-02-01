@@ -27,6 +27,33 @@
 
 ---
 
+## 🎨 Available Themes
+
+This repository now includes **three themes**:
+
+| Theme | Description | Best For |
+|-------|-------------|----------|
+| **Neumorphic** | Original soft-UI theme | General use, Mushroom cards |
+| **Full Neumorphic** | Extended variables | Advanced card-mod users |
+| **Neumorphism Pro** ⭐ | **Exact Themesberg reference** | Production-ready, exact color match |
+
+### 🆕 Neumorphism Pro (New!)
+
+**Perfect replica of [Themesberg Neumorphism UI Pro](https://demo.themesberg.com/neumorphism-ui-pro/)**
+
+- ✅ **Exact colors**: `#e6e7ee` base, `#b8b9be` / `#ffffff` shadows
+- ✅ **90+ HA variables** - complete coverage
+- ✅ **Light & Dark modes**
+- ✅ **Production-ready**
+
+**Installation:**
+1. Download [`themes/neumorphism_pro.yaml`](themes/neumorphism_pro.yaml)
+2. Copy to `/config/themes/` in Home Assistant
+3. Restart Home Assistant
+4. Select **"Neumorphism Pro"** in Profile → Theme
+
+---
+
 ## 📸 Screenshots
 
 <table>
@@ -73,7 +100,10 @@
 
 ### Option B: Manual Installation
 
-1. Download `themes/neumorphic.yaml` from this repository
+1. Download the theme you want:
+   - [`themes/neumorphic.yaml`](themes/neumorphic.yaml) - Original theme
+   - [`themes/full_neumorphic.yaml`](themes/full_neumorphic.yaml) - Extended variables
+   - [`themes/neumorphism_pro.yaml`](themes/neumorphism_pro.yaml) ⭐ **NEW** - Exact Themesberg colors
 2. Copy to your Home Assistant `/config/themes/` folder
 3. Ensure your `configuration.yaml` includes:
    ```yaml
@@ -81,6 +111,8 @@
      themes: !include_dir_merge_named themes
    ```
 4. Restart Home Assistant
+
+> **💡 Tip**: You can install multiple themes and switch between them!
 
 ---
 
