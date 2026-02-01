@@ -1,5 +1,6 @@
 {
-  "name": "Neumorphic Bliss",
+  "name": "Neumorphic Bliss (All Themes)",
+  "filename": "all_neumorphic_themes.yaml",
   "homeassistant": "2023.1.0",
   "render_readme": true
 }
