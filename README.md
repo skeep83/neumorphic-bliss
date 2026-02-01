@@ -1,4 +1,8 @@
-# Neumorphic Card-Mod Theme
+# Neumorphic Bliss (Themesberg Pro EXACT)
+
+> [!IMPORTANT]
+> **НОВАЯ ТЕМА: Neumorphism Pro** — это 100% точная копия дизайна Themesberg Neumorphism UI Pro.
+> Если HACS показывает только версию **v1.0.0**, при переустановке/обновлении выберите версию **main** в выпадающем списке. Это загрузит самую свежую версию темы.
 
 [![HACS Validation](https://github.com/ha-community/ha-neumorphic-cardmod-theme/actions/workflows/validate.yml/badge.svg)](https://github.com/ha-community/ha-neumorphic-cardmod-theme/actions/workflows/validate.yml)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2023.1+-41BDF5?style=flat-square&logo=home-assistant)](https://www.home-assistant.io/)
