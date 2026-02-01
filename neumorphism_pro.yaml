@@ -1,0 +1,522 @@
+# ==============================================================================
+# Neumorphism Pro Theme for Home Assistant
+# Exact replica of Themesberg Neumorphism UI Pro
+# https://demo.themesberg.com/neumorphism-ui-pro/
+# ==============================================================================
+# 
+# Design Specifications:
+# - Base Color: #e6e7ee (exact Themesberg match)
+# - Shadows: #b8b9be (dark) / #ffffff (light)
+# - Text: #31344b (primary) / #44476a (secondary)
+# - Typography: Nunito Sans (Google Fonts)
+# - Border Radius: 0.55rem (consistent with reference)
+#
+# Complete coverage of all Home Assistant UI elements
+# ==============================================================================
+
+"Neumorphism Pro":
+  # ===========================================================================
+  # LIGHT MODE - Exact Themesberg Reference
+  # ===========================================================================
+  modes:
+    light:
+      # -----------------------------------------------------------------------
+      # TYPOGRAPHY
+      # -----------------------------------------------------------------------
+      # Nunito Sans from Google Fonts (same as Themesberg reference)
+      primary-font-family: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      paper-font-common-base_-_font-family: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      
+      # -----------------------------------------------------------------------
+      # BASE NEUMORPHIC COLORS (Exact Themesberg Reference)
+      # -----------------------------------------------------------------------
+      # Primary background: #e6e7ee (EXACT match to Themesberg)
+      neumorphic-base: "#e6e7ee"
+      neumorphic-surface: "#e6e7ee"
+      neumorphic-surface-alt: "#dfe0e7"
+      
+      # Shadow colors for 3D neumorphic effect (EXACT Themesberg values)
+      neumorphic-shadow-light: "#ffffff"
+      neumorphic-shadow-dark: "#b8b9be"
+      
+      # Convex (raised) shadows - for cards, buttons
+      neumorphic-convex-shadow-xs: "2px 2px 4px #b8b9be, -2px -2px 4px #ffffff"
+      neumorphic-convex-shadow-sm: "3px 3px 6px #b8b9be, -3px -3px 6px #ffffff"
+      neumorphic-convex-shadow-md: "6px 6px 12px #b8b9be, -6px -6px 12px #ffffff"
+      neumorphic-convex-shadow-lg: "9px 9px 18px #b8b9be, -9px -9px 18px #ffffff"
+      neumorphic-convex-shadow-xl: "12px 12px 24px #b8b9be, -12px -12px 24px #ffffff"
+      
+      # Concave (inset) shadows - for inputs, pressed states
+      neumorphic-concave-shadow-xs: "inset 1px 1px 2px #b8b9be, inset -1px -1px 2px #ffffff"
+      neumorphic-concave-shadow-sm: "inset 2px 2px 4px #b8b9be, inset -2px -2px 4px #ffffff"
+      neumorphic-concave-shadow-md: "inset 4px 4px 8px #b8b9be, inset -4px -4px 8px #ffffff"
+      neumorphic-concave-shadow-lg: "inset 6px 6px 12px #b8b9be, inset -6px -6px 12px #ffffff"
+      
+      # Interactive states
+      neumorphic-hover-shadow: "10px 10px 20px #b8b9be, -10px -10px 20px #ffffff"
+      neumorphic-active-shadow: "inset 5px 5px 10px #b8b9be, inset -5px -5px 10px #ffffff"
+      
+      # Flat shadow (very subtle)
+      neumorphic-flat-shadow: "0 0.125rem 0.25rem rgba(31, 45, 61, 0.08)"
+      
+      # -----------------------------------------------------------------------
+      # BRAND COLORS (Themesberg Primary Palette)
+      # -----------------------------------------------------------------------
+      primary-color: "#31344b"
+      accent-color: "#e6e7ee"
+      dark-primary-color: "#262933"
+      light-primary-color: "#44476a"
+      
+      # Bootstrap-style theme colors (from Themesberg)
+      theme-color-primary: "#31344b"
+      theme-color-secondary: "#2D4CC8"
+      theme-color-tertiary: "#e6e7ee"
+      theme-color-success: "#18634B"
+      theme-color-info: "#0056B3"
+      theme-color-warning: "#F0B400"
+      theme-color-danger: "#A91E2C"
+      theme-color-dark: "#31344b"
+      theme-color-default: "#262833"
+      
+      # -----------------------------------------------------------------------
+      # TEXT COLORS (Themesberg Typography)
+      # -----------------------------------------------------------------------
+      primary-text-color: "#31344b"
+      secondary-text-color: "#44476a"
+      text-primary-color: "#ffffff"
+      disabled-text-color: "#93a5be"
+      text-light-primary-color: "#ffffff"
+      text-disabled-color: "#93a5be"
+      
+      # Additional text shades
+      text-color-muted: "#93a5be"
+      text-color-heading: "#262833"
+      
+      # -----------------------------------------------------------------------
+      # BACKGROUND COLORS
+      # -----------------------------------------------------------------------
+      primary-background-color: "#e6e7ee"
+      secondary-background-color: "#dfe0e7"
+      card-background-color: "#e6e7ee"
+      divider-color: "rgba(49, 52, 75, 0.08)"
+      
+      # -----------------------------------------------------------------------
+      # HEADER
+      # -----------------------------------------------------------------------
+      app-header-background-color: "#e6e7ee"
+      app-header-text-color: "#31344b"
+      app-header-edit-background-color: "#dfe0e7"
+      app-header-edit-text-color: "#31344b"
+      
+      # -----------------------------------------------------------------------
+      # SIDEBAR
+      # -----------------------------------------------------------------------
+      sidebar-background-color: "#e6e7ee"
+      sidebar-text-color: "#31344b"
+      sidebar-icon-color: "#44476a"
+      sidebar-selected-background-color: "#dfe0e7"
+      sidebar-selected-text-color: "#262933"
+      sidebar-selected-icon-color: "#262933"
+      
+      # -----------------------------------------------------------------------
+      # CARDS (Neumorphic Styling)
+      # -----------------------------------------------------------------------
+      ha-card-background: "#e6e7ee"
+      ha-card-border-radius: "0.55rem"
+      ha-card-border-width: "0px"
+      ha-card-border-color: "transparent"
+      ha-card-box-shadow: "6px 6px 12px #b8b9be, -6px -6px 12px #ffffff"
+      
+      # -----------------------------------------------------------------------
+      # STATE COLORS
+      # -----------------------------------------------------------------------
+      state-icon-color: "#44476a"
+      state-icon-active-color: "#31344b"
+      state-icon-unavailable-color: "#93a5be"
+      state-on-color: "#18634B"
+      state-off-color: "#93a5be"
+      
+      # Status colors (Themesberg palette)
+      success-color: "#18634B"
+      warning-color: "#F0B400"
+      error-color: "#A91E2C"
+      info-color: "#0056B3"
+      
+      # -----------------------------------------------------------------------
+      # BUTTONS & CONTROLS
+      # -----------------------------------------------------------------------
+      # Material Design Components
+      mdc-theme-primary: "#31344b"
+      mdc-theme-secondary: "#e6e7ee"
+      mdc-theme-on-primary: "#ffffff"
+      mdc-theme-on-secondary: "#31344b"
+      mdc-button-raised-box-shadow: "3px 3px 6px #b8b9be, -3px -3px 6px #ffffff"
+      mdc-button-outline-color: "#31344b"
+      
+      # Paper elements
+      paper-item-icon-color: "#44476a"
+      paper-item-icon-active-color: "#31344b"
+      
+      # -----------------------------------------------------------------------
+      # SWITCHES & TOGGLES
+      # -----------------------------------------------------------------------
+      switch-checked-color: "#31344b"
+      switch-unchecked-color: "#93a5be"
+      switch-checked-button-color: "#ffffff"
+      switch-unchecked-button-color: "#ffffff"
+      switch-checked-track-color: "#31344b"
+      switch-unchecked-track-color: "#d1d9e6"
+      
+      toggle-button-color: "#31344b"
+      toggle-button-unchecked-color: "#93a5be"
+      
+      # -----------------------------------------------------------------------
+      # SLIDERS
+      # -----------------------------------------------------------------------
+      slider-color: "#31344b"
+      slider-bar-color: "#d1d9e6"
+      slider-secondary-color: "#44476a"
+      paper-slider-knob-color: "#31344b"
+      paper-slider-active-color: "#31344b"
+      paper-slider-container-color: "#d1d9e6"
+      paper-slider-disabled-active-color: "#93a5be"
+      paper-slider-disabled-secondary-color: "#d1d9e6"
+      
+      # -----------------------------------------------------------------------
+      # INPUT FIELDS
+      # -----------------------------------------------------------------------
+      input-fill-color: "#dfe0e7"
+      input-ink-color: "#31344b"
+      input-label-ink-color: "#44476a"
+      input-idle-line-color: "transparent"
+      input-hover-line-color: "#31344b"
+      input-disabled-fill-color: "#e6e7ee"
+      input-disabled-ink-color: "#93a5be"
+      input-dropdown-icon-color: "#44476a"
+      
+      # -----------------------------------------------------------------------
+      # LABELS & BADGES
+      # -----------------------------------------------------------------------
+      label-badge-background-color: "#e6e7ee"
+      label-badge-text-color: "#31344b"
+      label-badge-red: "#A91E2C"
+      label-badge-green: "#18634B"
+      label-badge-blue: "#0056B3"
+      label-badge-yellow: "#F0B400"
+      label-badge-grey: "#93a5be"
+      
+      # -----------------------------------------------------------------------
+      # CHIPS
+      # -----------------------------------------------------------------------
+      chip-background-color: "#e6e7ee"
+      chip-text-color: "#31344b"
+      chip-icon-color: "#44476a"
+      chip-box-shadow: "3px 3px 6px #b8b9be, -3px -3px 6px #ffffff"
+      
+      # -----------------------------------------------------------------------
+      # DIALOGS & MODALS
+      # -----------------------------------------------------------------------
+      dialog-backdrop-filter: "blur(10px)"
+      mdc-dialog-scrim-color: "rgba(49, 52, 75, 0.4)"
+      
+      # -----------------------------------------------------------------------
+      # NOTIFICATIONS & TOASTS
+      # -----------------------------------------------------------------------
+      paper-toast-background-color: "#31344b"
+      paper-toast-color: "#ffffff"
+      
+      # -----------------------------------------------------------------------
+      # CODE EDITOR
+      # -----------------------------------------------------------------------
+      code-editor-background-color: "#dfe0e7"
+      codemirror-atom: "#A91E2C"
+      codemirror-comment: "#93a5be"
+      codemirror-keyword: "#0056B3"
+      codemirror-string: "#18634B"
+      codemirror-number: "#F0B400"
+      codemirror-variable: "#31344b"
+      codemirror-variable-2: "#44476a"
+      codemirror-operator: "#31344b"
+      
+      # -----------------------------------------------------------------------
+      # SCROLLBAR
+      # -----------------------------------------------------------------------
+      scrollbar-thumb-color: "rgba(49, 52, 75, 0.2)"
+      
+      # -----------------------------------------------------------------------
+      # LAYOUT & SPACING
+      # -----------------------------------------------------------------------
+      masonry-view-card-margin: "8px"
+      grid-card-gap: "16px"
+      stack-card-margin: "8px"
+      horizontal-stack-card-margin: "0 8px"
+      vertical-stack-card-margin: "8px 0"
+      
+      # -----------------------------------------------------------------------
+      # RGB VALUES (for rgba() usage)
+      # -----------------------------------------------------------------------
+      rgb-primary-color: "49, 52, 75"
+      rgb-accent-color: "230, 231, 238"
+      rgb-primary-text-color: "49, 52, 75"
+      rgb-text-primary-color: "255, 255, 255"
+      rgb-card-background-color: "230, 231, 238"
+      
+      # -----------------------------------------------------------------------
+      # ADDITIONAL ELEMENTS
+      # -----------------------------------------------------------------------
+      # Tables
+      table-row-background-color: "#e6e7ee"
+      table-row-alternative-background-color: "#dfe0e7"
+      data-table-background-color: "#e6e7ee"
+      
+      # Markdown
+      markdown-code-background-color: "#dfe0e7"
+
+    # =========================================================================
+    # DARK MODE - Themesberg Dark Variant
+    # =========================================================================
+    dark:
+      # -----------------------------------------------------------------------
+      # TYPOGRAPHY
+      # -----------------------------------------------------------------------
+      primary-font-family: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      paper-font-common-base_-_font-family: "'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      
+      # -----------------------------------------------------------------------
+      # BASE NEUMORPHIC COLORS (Dark Variant)
+      # -----------------------------------------------------------------------
+      neumorphic-base: "#1D1F2F"
+      neumorphic-surface: "#1D1F2F"
+      neumorphic-surface-alt: "#262933"
+      
+      # Shadow colors for dark neumorphic effect
+      neumorphic-shadow-light: "#262933"
+      neumorphic-shadow-dark: "#141622"
+      
+      # Convex (raised) shadows
+      neumorphic-convex-shadow-xs: "2px 2px 4px #141622, -2px -2px 4px #262933"
+      neumorphic-convex-shadow-sm: "3px 3px 6px #141622, -3px -3px 6px #262933"
+      neumorphic-convex-shadow-md: "6px 6px 12px #141622, -6px -6px 12px #262933"
+      neumorphic-convex-shadow-lg: "9px 9px 18px #141622, -9px -9px 18px #262933"
+      neumorphic-convex-shadow-xl: "12px 12px 24px #141622, -12px -12px 24px #262933"
+      
+      # Concave (inset) shadows
+      neumorphic-concave-shadow-xs: "inset 1px 1px 2px #141622, inset -1px -1px 2px #262933"
+      neumorphic-concave-shadow-sm: "inset 2px 2px 4px #141622, inset -2px -2px 4px #262933"
+      neumorphic-concave-shadow-md: "inset 4px 4px 8px #141622, inset -4px -4px 8px #262933"
+      neumorphic-concave-shadow-lg: "inset 6px 6px 12px #141622, inset -6px -6px 12px #262933"
+      
+      # Interactive states
+      neumorphic-hover-shadow: "10px 10px 20px #141622, -10px -10px 20px #262933"
+      neumorphic-active-shadow: "inset 5px 5px 10px #141622, inset -5px -5px 10px #262933"
+      
+      # Flat shadow
+      neumorphic-flat-shadow: "0 0.125rem 0.25rem rgba(0, 0, 0, 0.2)"
+      
+      # -----------------------------------------------------------------------
+      # BRAND COLORS
+      # -----------------------------------------------------------------------
+      primary-color: "#e6e7ee"
+      accent-color: "#31344b"
+      dark-primary-color: "#ffffff"
+      light-primary-color: "#d1d9e6"
+      
+      # Bootstrap-style theme colors (adjusted for dark)
+      theme-color-primary: "#e6e7ee"
+      theme-color-secondary: "#5A8DEE"
+      theme-color-tertiary: "#31344b"
+      theme-color-success: "#42BA96"
+      theme-color-info: "#1C7ED6"
+      theme-color-warning: "#FBB140"
+      theme-color-danger: "#FF6B6B"
+      theme-color-dark: "#e6e7ee"
+      theme-color-default: "#d1d9e6"
+      
+      # -----------------------------------------------------------------------
+      # TEXT COLORS
+      # -----------------------------------------------------------------------
+      primary-text-color: "#e6e7ee"
+      secondary-text-color: "#b1bcce"
+      text-primary-color: "#1D1F2F"
+      disabled-text-color: "#525480"
+      text-light-primary-color: "#e6e7ee"
+      text-disabled-color: "#525480"
+      
+      text-color-muted: "#525480"
+      text-color-heading: "#ffffff"
+      
+      # -----------------------------------------------------------------------
+      # BACKGROUND COLORS
+      # -----------------------------------------------------------------------
+      primary-background-color: "#1D1F2F"
+      secondary-background-color: "#262933"
+      card-background-color: "#1D1F2F"
+      divider-color: "rgba(230, 231, 238, 0.08)"
+      
+      # -----------------------------------------------------------------------
+      # HEADER
+      # -----------------------------------------------------------------------
+      app-header-background-color: "#1D1F2F"
+      app-header-text-color: "#e6e7ee"
+      app-header-edit-background-color: "#262933"
+      app-header-edit-text-color: "#e6e7ee"
+      
+      # -----------------------------------------------------------------------
+      # SIDEBAR
+      # -----------------------------------------------------------------------
+      sidebar-background-color: "#1D1F2F"
+      sidebar-text-color: "#e6e7ee"
+      sidebar-icon-color: "#b1bcce"
+      sidebar-selected-background-color: "#262933"
+      sidebar-selected-text-color: "#ffffff"
+      sidebar-selected-icon-color: "#ffffff"
+      
+      # -----------------------------------------------------------------------
+      # CARDS
+      # -----------------------------------------------------------------------
+      ha-card-background: "#1D1F2F"
+      ha-card-border-radius: "0.55rem"
+      ha-card-border-width: "0px"
+      ha-card-border-color: "transparent"
+      ha-card-box-shadow: "6px 6px 12px #141622, -6px -6px 12px #262933"
+      
+      # -----------------------------------------------------------------------
+      # STATE COLORS
+      # -----------------------------------------------------------------------
+      state-icon-color: "#b1bcce"
+      state-icon-active-color: "#e6e7ee"
+      state-icon-unavailable-color: "#525480"
+      state-on-color: "#42BA96"
+      state-off-color: "#525480"
+      
+      # Status colors
+      success-color: "#42BA96"
+      warning-color: "#FBB140"
+      error-color: "#FF6B6B"
+      info-color: "#1C7ED6"
+      
+      # -----------------------------------------------------------------------
+      # BUTTONS & CONTROLS
+      # -----------------------------------------------------------------------
+      mdc-theme-primary: "#e6e7ee"
+      mdc-theme-secondary: "#31344b"
+      mdc-theme-on-primary: "#1D1F2F"
+      mdc-theme-on-secondary: "#e6e7ee"
+      mdc-button-raised-box-shadow: "3px 3px 6px #141622, -3px -3px 6px #262933"
+      mdc-button-outline-color: "#e6e7ee"
+      
+      paper-item-icon-color: "#b1bcce"
+      paper-item-icon-active-color: "#e6e7ee"
+      
+      # -----------------------------------------------------------------------
+      # SWITCHES & TOGGLES
+      # -----------------------------------------------------------------------
+      switch-checked-color: "#e6e7ee"
+      switch-unchecked-color: "#525480"
+      switch-checked-button-color: "#1D1F2F"
+      switch-unchecked-button-color: "#1D1F2F"
+      switch-checked-track-color: "#e6e7ee"
+      switch-unchecked-track-color: "#3d3f54"
+      
+      toggle-button-color: "#e6e7ee"
+      toggle-button-unchecked-color: "#525480"
+      
+      # -----------------------------------------------------------------------
+      # SLIDERS
+      # -----------------------------------------------------------------------
+      slider-color: "#e6e7ee"
+      slider-bar-color: "#3d3f54"
+      slider-secondary-color: "#b1bcce"
+      paper-slider-knob-color: "#e6e7ee"
+      paper-slider-active-color: "#e6e7ee"
+      paper-slider-container-color: "#3d3f54"
+      paper-slider-disabled-active-color: "#525480"
+      paper-slider-disabled-secondary-color: "#3d3f54"
+      
+      # -----------------------------------------------------------------------
+      # INPUT FIELDS
+      # -----------------------------------------------------------------------
+      input-fill-color: "#262933"
+      input-ink-color: "#e6e7ee"
+      input-label-ink-color: "#b1bcce"
+      input-idle-line-color: "transparent"
+      input-hover-line-color: "#e6e7ee"
+      input-disabled-fill-color: "#1D1F2F"
+      input-disabled-ink-color: "#525480"
+      input-dropdown-icon-color: "#b1bcce"
+      
+      # -----------------------------------------------------------------------
+      # LABELS & BADGES
+      # -----------------------------------------------------------------------
+      label-badge-background-color: "#1D1F2F"
+      label-badge-text-color: "#e6e7ee"
+      label-badge-red: "#FF6B6B"
+      label-badge-green: "#42BA96"
+      label-badge-blue: "#1C7ED6"
+      label-badge-yellow: "#FBB140"
+      label-badge-grey: "#525480"
+      
+      # -----------------------------------------------------------------------
+      # CHIPS
+      # -----------------------------------------------------------------------
+      chip-background-color: "#1D1F2F"
+      chip-text-color: "#e6e7ee"
+      chip-icon-color: "#b1bcce"
+      chip-box-shadow: "3px 3px 6px #141622, -3px -3px 6px #262933"
+      
+      # -----------------------------------------------------------------------
+      # DIALOGS & MODALS
+      # -----------------------------------------------------------------------
+      dialog-backdrop-filter: "blur(10px)"
+      mdc-dialog-scrim-color: "rgba(20, 22, 34, 0.6)"
+      
+      # -----------------------------------------------------------------------
+      # NOTIFICATIONS & TOASTS
+      # -----------------------------------------------------------------------
+      paper-toast-background-color: "#e6e7ee"
+      paper-toast-color: "#1D1F2F"
+      
+      # -----------------------------------------------------------------------
+      # CODE EDITOR
+      # -----------------------------------------------------------------------
+      code-editor-background-color: "#262933"
+      codemirror-atom: "#FF6B6B"
+      codemirror-comment: "#525480"
+      codemirror-keyword: "#1C7ED6"
+      codemirror-string: "#42BA96"
+      codemirror-number: "#FBB140"
+      codemirror-variable: "#e6e7ee"
+      codemirror-variable-2: "#b1bcce"
+      codemirror-operator: "#e6e7ee"
+      
+      # -----------------------------------------------------------------------
+      # SCROLLBAR
+      # -----------------------------------------------------------------------
+      scrollbar-thumb-color: "rgba(230, 231, 238, 0.2)"
+      
+      # -----------------------------------------------------------------------
+      # LAYOUT & SPACING
+      # -----------------------------------------------------------------------
+      masonry-view-card-margin: "8px"
+      grid-card-gap: "16px"
+      stack-card-margin: "8px"
+      horizontal-stack-card-margin: "0 8px"
+      vertical-stack-card-margin: "8px 0"
+      
+      # -----------------------------------------------------------------------
+      # RGB VALUES
+      # -----------------------------------------------------------------------
+      rgb-primary-color: "230, 231, 238"
+      rgb-accent-color: "49, 52, 75"
+      rgb-primary-text-color: "230, 231, 238"
+      rgb-text-primary-color: "29, 31, 47"
+      rgb-card-background-color: "29, 31, 47"
+      
+      # -----------------------------------------------------------------------
+      # ADDITIONAL ELEMENTS
+      # -----------------------------------------------------------------------
+      table-row-background-color: "#1D1F2F"
+      table-row-alternative-background-color: "#262933"
+      data-table-background-color: "#1D1F2F"
+      
+      markdown-code-background-color: "#262933"
