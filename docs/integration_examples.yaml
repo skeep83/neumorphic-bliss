@@ -1,0 +1,258 @@
+# ==============================================================================
+# NEUMORPHISM PRO - HOME ASSISTANT INTEGRATION EXAMPLES
+# ==============================================================================
+# Test these examples in your Home Assistant dashboard to verify full integration
+# Copy these YAML snippets to your dashboard in edit mode
+# ==============================================================================
+
+# ==============================================================================
+# EXAMPLE 1: BASIC BUTTON CARD
+# ==============================================================================
+type: button
+entity: light.living_room
+name: Living Room Light
+icon: mdi:lightbulb
+show_state: true
+tap_action:
+  action: toggle
+
+# Expected Result:
+# - Neumorphic raised shadow
+# - Nunito Sans font
+# - #31344b text color on #e6e7ee background
+# - 0.55rem border radius
+
+# ==============================================================================
+# EXAMPLE 2: ENTITY CARD WITH MULTIPLE ENTITIES
+# ==============================================================================
+type: entities
+title: Climate Control
+entities:
+  - entity: climate.thermostat
+    name: Thermostat
+  - entity: sensor.temperature
+    name: Temperature
+  - entity: sensor.humidity
+    name: Humidity
+  - entity: switch.fan
+    name: Fan
+
+# Expected Result:
+# - Card with convex shadow (6px 6px 12px)
+# - Switches with neumorphic styling
+# - Icons in #44476a color
+# - Active states in #31344b
+
+# ==============================================================================
+# EXAMPLE 3: HORIZONTAL STACK WITH CHIPS
+# ==============================================================================
+type: horizontal-stack
+cards:
+  - type: button
+    entity: light.bedroom
+    name: Bedroom
+    icon: mdi:bed
+    tap_action:
+      action: toggle
+  - type: button
+    entity: light.kitchen
+    name: Kitchen
+    icon: mdi:stove
+    tap_action:
+      action: toggle
+  - type: button
+    entity: light.bathroom
+    name: Bathroom
+    icon: mdi:shower
+    tap_action:
+      action: toggle
+
+# Expected Result:
+# - Three buttons with consistent spacing (0 8px)
+# - All with neumorphic raised shadow
+# - Hover effect should show enhanced shadow
+
+# ==============================================================================
+# EXAMPLE 4: GRID CARD (VARIOUS ENTITY TYPES)
+# ==============================================================================
+type: grid
+columns: 2
+square: false
+cards:
+  - type: button
+    entity: switch.living_room_lamp
+    name: Lamp
+    icon: mdi:lamp
+  - type: button
+    entity: switch.bedroom_fan
+    name: Fan  
+    icon: mdi:fan
+  - type: sensor
+    entity: sensor.temperature
+    name: Temperature
+    icon: mdi:thermometer
+  - type: sensor
+    entity: sensor.humidity
+    name: Humidity
+    icon: mdi:water-percent
+
+# Expected Result:
+# - 16px gap between cards
+# - Sensor cards with proper state colors
+# - Success color (#18634B) for active states
+
+# ==============================================================================
+# EXAMPLE 5: INPUT CONTROLS (SLIDERS, TOGGLES, TEXT)
+# ==============================================================================
+type: entities
+title: Controls
+entities:
+  - entity: input_boolean.example_toggle
+    name: Toggle Switch
+  - entity: input_number.brightness
+    name: Brightness Slider
+  - entity: input_text.example_text
+    name: Text Input
+  - entity: input_select.example_select
+    name: Dropdown Select
+
+# Expected Result:
+# - Toggle: convex when off, concave when on
+# - Slider: #31344b knob, #d1d9e6 track
+# - Input field: concave shadow (inset effect)
+# - Dropdown: proper icon color #44476a
+
+# ==============================================================================
+# EXAMPLE 6: WEATHER CARD
+# ==============================================================================
+type: weather-forecast
+entity: weather.home
+show_forecast: true
+
+# Expected Result:
+# - Card background #e6e7ee
+# - Neumorphic shadow
+# - Text in #31344b / #44476a
+# - Proper icon colors
+
+# ==============================================================================
+# EXAMPLE 7: MARKDOWN CARD (TYPOGRAPHY TEST)
+# ==============================================================================
+type: markdown
+content: |
+  # Heading 1
+  ## Heading 2
+  ### Heading 3
+  
+  Regular paragraph text with **bold** and *italic* styling.
+  
+  - List item 1
+  - List item 2
+  - List item 3
+  
+  ```yaml
+  # Code block
+  entity: light.example
+  state: "on"
+  ```
+
+# Expected Result:
+# - Nunito Sans font throughout
+# - Headings in #262833
+# - Body text in #31344b
+# - Code background #dfe0e7
+# - Proper hierarchy and spacing
+
+# ==============================================================================
+# EXAMPLE 8: MEDIA PLAYER CARD
+# ==============================================================================
+type: media-control
+entity: media_player.living_room
+
+# Expected Result:
+# - Neumorphic card styling
+# - Play/pause buttons with raised shadow
+# - Volume slider with concave track
+# - Active state in #31344b
+
+# ==============================================================================
+# EXAMPLE 9: THERMOSTAT CARD
+# ==============================================================================
+type: thermostat
+entity: climate.thermostat
+
+# Expected Result:
+# - Circular control with neumorphic styling
+# - Temperature display in Nunito Sans
+# - Mode buttons with proper shadows
+# - Active mode highlighted in #31344b
+
+# ==============================================================================
+# EXAMPLE 10: LIGHT CARD WITH BRIGHTNESS
+# ==============================================================================
+type: light
+entity: light.bedroom
+name: Bedroom Light
+icon: mdi:lightbulb
+
+# Expected Result:
+# - Brightness slider with concave track
+# - Toggle with proper on/off colors
+# - Success color (#18634B) when on
+# - Disabled color (#93a5be) when off
+
+# ==============================================================================
+# CARD-MOD ADVANCED EXAMPLE (Requires card-mod installed)
+# ==============================================================================
+type: button
+entity: light.example
+name: Custom Styled Button
+icon: mdi:lightbulb
+card_mod:
+  style: |
+    ha-card {
+      background: var(--neumorphic-surface) !important;
+      box-shadow: var(--neumorphic-convex-shadow-lg) !important;
+      font-family: var(--primary-font-family) !important;
+      transition: all 0.2s ease;
+    }
+    ha-card:hover {
+      box-shadow: var(--neumorphic-hover-shadow) !important;
+      transform: translateY(-2px);
+    }
+    ha-card:active {
+      box-shadow: var(--neumorphic-active-shadow) !important;
+      transform: translateY(0);
+    }
+
+# Expected Result:
+# - Extra large convex shadow
+# - Smooth hover effect with enhanced shadow
+# - Press effect with concave shadow
+# - Nunito Sans font
+
+# ==============================================================================
+# VERIFICATION CHECKLIST
+# ==============================================================================
+# [ ] All cards have neumorphic shadows (convex/concave)
+# [ ] Text uses Nunito Sans font family
+# [ ] Colors match Themesberg reference:
+#     - Background: #e6e7ee
+#     - Text: #31344b (primary), #44476a (secondary)
+#     - Shadows: #b8b9be (dark), #ffffff (light)
+# [ ] Border radius is 0.55rem on all cards
+# [ ] Active states use #31344b
+# [ ] Success states use #18634B (green)
+# [ ] Error states use #A91E2C (red)
+# [ ] Warning states use #F0B400 (yellow)
+# [ ] Info states use #0056B3 (blue)
+# [ ] Switches toggle between convex/concave shadows
+# [ ] Sliders have concave tracks
+# [ ] Input fields have inset shadow
+# [ ] Hover effects enhance shadows
+# [ ] Active/pressed states use inset shadows
+# [ ] All spacing follows grid (8px, 16px)
+# [ ] Icons use proper colors (#44476a inactive, #31344b active)
+# [ ] Disabled elements use #93a5be color
+# [ ] Dark mode uses #1D1F2F base with proper shadows
+# ==============================================================================
