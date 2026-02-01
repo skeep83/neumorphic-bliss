@@ -330,6 +330,19 @@ card_mod:
     }
 ```
 
+### 🔄 Updating via HACS
+
+If you already have this repository added and don't see **Neumorphism Pro**:
+
+1. Open **HACS** in Home Assistant.
+2. Go to **Entry** for this repository (`Neumorphic Bliss`).
+3. Click the **three dots (⋮)** in the top right.
+4. Select **Update information** to force HACS to see the new GitHub changes.
+5. If an update is available, click **Update**.
+6. If not, click **Redownload**.
+7. **IMPORTANT**: Go to **Developer Tools** → **YAML** → Click **THEMES** to reload them without restarting.
+8. Refresh your browser page (`Ctrl + F5`).
+
 ---
 
 ## ⚠️ Known Issues & Tips

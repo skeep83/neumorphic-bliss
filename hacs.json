@@ -1,6 +1,6 @@
 {
-  "name": "Neumorphism Pro - Exact Themesberg Reference",
-  "filename": "neumorphism_pro.yaml",
+  "name": "Neumorphism Pro",
+  "filename": "themes/neumorphism_pro.yaml",
   "homeassistant": "2023.1.0",
   "render_readme": true
 }
