@@ -7,6 +7,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-02-23
+
+### 🎨 Full Native Overhaul — "Neumorphism Pro"
+
+Complete rewrite of the theme file for **100% native HA coverage**.
+
+### Added
+
+- **200+ CSS variables** per mode (light & dark) — every HA native variable defined
+- **Themesberg-inspired palette**: `#e6e7ee` light base, `#1e2030` dark base
+- **Nunito Sans** typography (Google Fonts)
+- **Full Material color palette** (23 named colors: red through white)
+- **54 graph/calendar colors** (color-1 through color-54)
+- **8 energy dashboard colors** (grid, solar, battery, gas, water)
+- **80+ state domain colors** (alarm, climate, binary_sensor, lock, weather, etc.)
+- **Full MDC component coverage** (theme, checkbox, radio, dialog, text-field, select, button, tab)
+- **Input outlined styles** (idle-border, hover-border, disabled-border)
+- **HA assist chips & buttons** styling
+- **Neumorphic shadow system** — xs, sm, md, lg, xl convex + xs, sm, md, lg concave + hover, active, flat
+- **Code editor** — full CodeMirror syntax highlighting (18 token types)
+- **Dark mode map filter** for inverted tiles
+- **History colors** (unavailable, unknown)
+
+### Changed
+
+- Theme name: **"Neumorphism Pro"** (was "Neumorphic")
+- Border radius: `0.55rem` (Themesberg reference)
+- Neumorphic shadows use exact hex values (`#b8b9be` / `#ffffff` light, `#141622` / `#282a3e` dark)
+
+### Removed
+
+- Duplicate root files `neumorphism_pro.yaml` and `full_neumorphic.yaml`
+- Consolidated canonical theme into `neumorphic.yaml` + `themes/neumorphism_pro.yaml`
+
 ## [1.0.0] - 2024-01-08
 
 ### Added
